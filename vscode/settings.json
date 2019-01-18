@@ -1,0 +1,46 @@
+{
+    // disable telemetry reporting
+    "telemetry.enableTelemetry": false,
+
+    "workbench.colorTheme": "Solarized Dark",
+    "materialTheme.fixIconsRunning": false,
+    "workbench.iconTheme": "eq-material-theme-icons",
+
+    // vim
+    "vim.useSystemClipboard": true,
+    "vim.hlsearch": true,
+    "vim.easymotion": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["s"],
+            "after": ["leader", "leader", "s"]
+        },
+        {
+            "before": ["<C-n>"],
+            "commands": [":nohl"]
+        },
+        {
+            "before": ["-"],
+            "commands": ["+"]
+        },
+        {
+            "before": ["+"],
+            "commands": ["-"]
+        } 
+    ],
+    // Uses a hack to move around folds properly
+    "vim.foldfix": true,
+    "vim.statusBarColorControl": true,
+    "vim.statusBarColors.normal": ["#8FBCBB", "#434C5E"],
+    "vim.statusBarColors.insert": ["#BF616A", "#434C5E"],
+    "vim.statusBarColors.visual": ["#B48EAD", "#434C5E"],
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#8FBCBB",
+        "statusBar.noFolderBackground": "#8FBCBB",
+        "statusBar.debuggingBackground": "#8FBCBB",
+        "statusBar.foreground": "#434C5E"
+    },
+    "window.zoomLevel": 0,
+    "editor.quickSuggestions": false,
+    "diffEditor.ignoreTrimWhitespace": false
+}
