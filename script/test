@@ -1,0 +1,6 @@
+for src in $(find -H .. -name '*.symlink')
+do
+    dir="$(dirname "${src#*/*/}")"
+    file="$(basename "${src%.*}")"
+    printf "\r $dir$file \n"
+done
