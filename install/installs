@@ -1,0 +1,4 @@
+# install Visual Code
+    yaourt -S visual-studio-code-bin
+
+
