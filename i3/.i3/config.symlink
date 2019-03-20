@@ -70,7 +70,7 @@ bindsym $mod+x split h
 bindsym $mod+y split v
 
 # enter fullscreen mode for the focused container
-# bindsym $mod+f fullscreen toggle
+bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+a layout stacking
@@ -177,7 +177,7 @@ bar {
 exec xmodmap -e "clear lock" #disable caps lock switch
 exec xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
 
-exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/wall.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/wall.jpg
 
 exec --no-startup-id i3-msg 'workspace '$workspace5'; exec chromium --proxy-pac-url=http://pac.zscloud.net/seeds-excellence.com/Seeds_PAC'
 exec --no-startup-id i3-msg 'workspace '$workspace4'; exec chromium --proxy-pac-url=http://pac.zscloud.net/seeds-excellence.com/Seeds_PAC'

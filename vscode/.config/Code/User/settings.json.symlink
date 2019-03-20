@@ -4,7 +4,7 @@
 
     "workbench.colorTheme": "Solarized Dark",
     "materialTheme.fixIconsRunning": false,
-    "workbench.iconTheme": "eq-material-theme-icons",
+    "workbench.iconTheme": "material-icon-theme",
 
     // vim
     "vim.useSystemClipboard": true,
@@ -42,5 +42,8 @@
     },
     "window.zoomLevel": 0,
     "editor.quickSuggestions": false,
-    "diffEditor.ignoreTrimWhitespace": false
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "'Fira Code'",
+    "material-icon-theme.folders.theme": "classic"
 }

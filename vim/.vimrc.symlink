@@ -49,3 +49,4 @@ runtime! macros/matchit.vim
 
 " Move up/down editor lines
 
+set clipboard=unnamedplus

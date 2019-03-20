@@ -23,7 +23,7 @@
 #     miller: Use miller columns which show multiple levels of the hierarchy
 #     multipane: Midnight-commander like multipane view showing all tabs next
 #                to each other
-set viewmode miller
+# set viewmode miller
 #set viewmode multipane
 
 # How many columns are there, and what are their relative widths?
@@ -207,10 +207,10 @@ set idle_delay 2000
 set metadata_deep_search false
 
 # Clear all existing filters when leaving a directory
-set clear_filters_on_dir_change false
+# set clear_filters_on_dir_change false
 
 # Disable displaying line numbers in main column
-set line_numbers false
+# set line_numbers false
 
 # ===================================================================
 # == Local Options
@@ -269,7 +269,7 @@ map #  console shell -p%space
 map s  console shell%space
 map r  chain draw_possible_programs; console open_with%%space
 #map f  console find%space
-map f console scout -ftsea%space
+map f console scout -ftse%space
 map cd console cd%space
 
 # Change the line mode
@@ -335,10 +335,14 @@ map ]     move_parent 1
 map [     move_parent -1
 map }     traverse
 
+map gp cd ~/myprojects
+map g. cd ~/.dotfiles
+map gd cd ~/Downloads
+
 map gh cd ~
 map ge cd /etc
 map gu cd /usr
-map gd cd /dev
+# map gd cd /dev
 map gl cd -r .
 map gL cd -r %f
 map go cd /opt
@@ -613,7 +617,7 @@ tmap <delete>   eval -q fm.ui.taskview.task_remove()
 tmap <C-l> redraw_window
 tmap <ESC> taskview_close
 copytmap <ESC> q Q w <C-c>
-default_linemode devicons
+# default_linemode devicons
 
 # find
 map <C-f> fzf_select
