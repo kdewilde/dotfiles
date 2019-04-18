@@ -1,3 +1,10 @@
+set ignorecase
+set smartcase
+
+set incsearch
+set hlsearch
+nnoremap <esc><esc> :nohls<cr>
+
 set surround
 nmap s :action KJumpAction<cr>
 
@@ -5,3 +12,4 @@ nmap gh :action ShowNavBar<cr>
 nmap gb :action Back<cr>
 nmap gi :action GotoImplementation<cr>
 nmap gu :action ShowUsages<cr>
+nmap gf :action ReformatCode<cr>
