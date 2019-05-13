@@ -336,7 +336,7 @@ map [     move_parent -1
 map }     traverse
 
 map gp cd ~/myprojects
-map g. cd ~/.dotfiles
+map g. cd ~/dotfiles
 map gd cd ~/Downloads
 map gm cd ~/memo
 
