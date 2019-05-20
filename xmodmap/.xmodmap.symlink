@@ -1,0 +1,19 @@
+
+! run the following command
+! xmodmap ~/.xmodmap
+
+
+! clear   Lock
+! keycode 66 = Escape
+
+! run the following command
+! xcape -e 'Mode_switch=Escape'
+keycode 66 = Mode_switch
+keysym h = h H Left
+keysym l = l L Right
+keysym k = k K Up
+keysym j = j J Down
+keysym u = u U Home
+keysym o = o O End
+keysym p = p P BackSpace
+keysym m = m M Delete
