@@ -338,6 +338,7 @@ map }     traverse
 map gp cd ~/myprojects
 map g. cd ~/dotfiles
 map gd cd ~/Downloads
+map gm cd ~/memo
 
 map gh cd ~
 map ge cd /etc
@@ -347,7 +348,7 @@ map gl cd -r .
 map gL cd -r %f
 map go cd /opt
 map gv cd /var
-map gm cd /media
+# map gm cd /media
 map gM cd /mnt
 map gs cd /srv
 map gr cd /
