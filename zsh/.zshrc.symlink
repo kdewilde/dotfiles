@@ -38,6 +38,10 @@ zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
 
+
+# Enable fuzzy finding
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # # User configuration
 # 
 # # ssh
@@ -87,3 +91,4 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 #         echo "'$1' is not a valid file"
 #     fi
 # }
+
