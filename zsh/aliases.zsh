@@ -1,4 +1,3 @@
-export BLA='BLOE'
 alias reload!='. ~/.zshrc'
 
 alias cls='clear' # Good 'ol Clear Screen command
@@ -8,9 +7,10 @@ alias ll="ls -lhA"
 
 alias r="ranger"
 
-alias vimrc="vi ~/.vimrc"
-alias zshrc="vi ~/.zshrc"
-alias i3conf="vi ~/.config/i3/config"
+alias vimrc="vim ~/.vimrc"
+alias zshrc="vim ~/.zshrc"
+alias i3conf="vim ~/.config/i3/config"
+alias rcconf="vim ~/.config/ranger/rc.conf"
 
 alias postman="~/myapps/Postman/app/Postman &|"
 alias robo3t="~/myapps/robo3t/bin/robo3t &|"

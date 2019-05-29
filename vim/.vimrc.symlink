@@ -9,6 +9,18 @@ execute pathogen#infect()
 
 nmap s <Plug>(easymotion-s)
 
+"""""""""""""""""""""""""""""""
+" FZF settings
+"
+" add fzf to the runtimepath
+set rtp+=~/.fzf
+" replace fzf find command with ag and use .gitignore
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+
+nnoremap <silent> <C-p> :Files<cr>
+nnoremap <silent> <C-e> :Buffers<cr>
+
+
 " Turn on syntax highlighting
 syntax on
 
@@ -16,7 +28,9 @@ syntax on
 filetype plugin indent on
 
 " TODO: Pick a leader key
-" let mapleader = ","
+" let mapleader = " "
+
+
 
 " Security
 set modelines=0
@@ -60,6 +74,10 @@ set smartcase
 set incsearch
 set hlsearch
 nnoremap <esc><esc> :nohls<cr>
+
+" Folding options
+set foldmethod=syntax
+set nofoldenable "open files 'normal'
 
 " format json
 nmap gf :%!python -m json.tool<CR>

@@ -1,0 +1,24 @@
+#!/bin/sh
+LIST_OF_APPS="chromium pathogen visual-studio-code"
+
+YAOURT_CMD=$(which yaourt)
+APT_GET_CMD=$(which apt-get)
+
+if [[ ! -z $APT_GET_CMD ]]; then
+    yaourt -Sy
+    yaourt -S $LIST_OF_APPS
+elif [[ ! -z $APT_GET_CMD ]]; then
+    sudo apt-get update
+    apt-get $LIST_OF_APPS
+else
+    echo "error can't install package $PACKAGE"
+    exit 1;
+fi
+
+
+# install vim-easymotion
+    git clone https://github.com/easymotion/vim-easymotion ~/.vim/bundle/vim-easymotion
+
+# install fzf
+   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+   ~/.fzf/install

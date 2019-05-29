@@ -1,0 +1,16 @@
+#!/bin/sh
+#
+# Quick shortcut to a search inside the files in the  ~/memo folder
+#
+# USAGE:
+#
+#   $ memof
+#   # => shows an ag of the memo files
+#   
+
+file="$(ag --nobreak --noheading $@ | fzf -0 -1 | awk -F: '{print $1}')"
+
+  if [ -n $file ]
+  then
+     vim $file
+  fi
