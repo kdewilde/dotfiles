@@ -37,6 +37,9 @@ scrollback_lines = 10000
 # "off", "left" or "right"
 #scrollbar = off
 
+# ======================================
+# NORD Color Theme
+# ======================================
 [colors]
 cursor = #d8dee9
 cursor_foreground = #2e3440
@@ -63,7 +66,7 @@ color12 = #81a1c1
 color13 = #b48ead
 color14 = #8fbcbb
 color15 = #eceff4
-
+# ======================================
 
 [hints]
 #font = Monospace 12
