@@ -17,5 +17,7 @@ if [ $# -eq 0 ]
         then vim $selectedMemo
     fi
 else
+    dirname=$(dirname $1)
+    mkdir -p ~/memo/$dirname
     exec "$EDITOR" ~/memo/"${1:-.}"
 fi
