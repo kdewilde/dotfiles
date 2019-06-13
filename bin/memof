@@ -8,7 +8,7 @@
 #   # => shows an ag of the memo files
 #   
 
-file="$(ag --nobreak --noheading $@ | fzf -0 -1 | awk -F: '{print $1}')"
+file="$(ag --nobreak --noheading $@ ~/memo | fzf -0 -1 | awk -F: '{print $1}')"
 
   if [ -n $file ]
   then

@@ -12,7 +12,7 @@
 #   # => opens the specified file in $EDITOR (used to create)
 if [ $# -eq 0 ]
     then
-    selectedMemo=$(find ~/memo ! -path ~/memo | fzf --preview 'cat {}')
+    selectedMemo=$(find ~/memo -type f | fzf --preview 'cat {}')
     if [ $selectedMemo ]
         then vim $selectedMemo
     fi
