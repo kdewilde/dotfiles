@@ -1,36 +1,80 @@
 " Don't try to be vi compatible
 set nocompatible
 
-" Helps force plugins to load correctly when it is turned back on below
-filetype off
+set timeoutlen=1000 ttimeoutlen=0
 
-" TODO: Load plugins here (pathogen or vundle)
-execute pathogen#infect()
 
+"""""""""""""""""""""""""""""""
+" PLUG settings
+"""""""""""""""""""""""""""""""
+" Check if plug.vim is installed else do so
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+      \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'easymotion/vim-easymotion'
+" Plug 'SirVer/ultisnips'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+
+" Initialize plugin system
+call plug#end()
+"""""""""""""""""""""""""""""""
 nmap s <Plug>(easymotion-s)
 
 """""""""""""""""""""""""""""""
 " FZF settings
-"
+"""""""""""""""""""""""""""""""
 " add fzf to the runtimepath
-set rtp+=~/.fzf
+" set rtp+=~/.fzf
 " replace fzf find command with ag and use .gitignore
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 nnoremap <silent> <C-p> :Files<cr>
 nnoremap <silent> <C-e> :Buffers<cr>
+nnoremap <silent> <C-l> :Lines<cr>
+"""""""""""""""""""""""""""""""
 
+"""""""""""""""""""""""""""""""
+" CoC settings
+"""""""""""""""""""""""""""""""
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+"""""""""""""""""""""""""""""""
 
 " Turn on syntax highlighting
 syntax on
 
-" For plugins to load correctly
-filetype plugin indent on
-
 " TODO: Pick a leader key
-" let mapleader = " "
+let mapleader = " "
+
+" Tab between buffers
+noremap <tab> <c-w>w
+noremap <S-tab> <c-w>W
+
+" Switch between last two buffers
+nnoremap <leader><leader> <C-^>
+
+" NERDTree
+nmap <leader>n :NERDTreeToggle<CR>
 
 
+set tags=tags;/
 
 " Security
 set modelines=0
@@ -42,7 +86,8 @@ set number
 set ruler
 
 " Blink cursor on error instead of beeping (grr)
-set visualbell
+" set visualbell
+set belloff=all
 
 " Encoding
 set encoding=utf-8
@@ -51,11 +96,16 @@ set encoding=utf-8
 set wrap!
 set textwidth=79
 set formatoptions=tcqrn1
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
 set noshiftround
+set tabstop=4       " The width of a TAB is set to 4.
+                    " Still it is a \t. It is just that
+                    " Vim will interpret it to be having
+                    " a width of 4.
+set shiftwidth=4    " Indents with '>' will have a width of 4.
+set softtabstop=4   " Sets the number of columns for a TAB.
+set expandtab       " Expand TABs to spaces.
+
+autocmd Filetype json setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
 " Cursor motion
 set scrolloff=3
@@ -78,6 +128,13 @@ nnoremap <esc><esc> :nohls<cr>
 " Folding options
 set foldmethod=syntax
 set nofoldenable "open files 'normal'
+
+" Persistent undo
+set undofile
+set undodir=$HOME/.vim/undo
+
+set undolevels=1000
+set undoreload=10000
 
 " format json
 nmap gf :%!python -m json.tool<CR>
