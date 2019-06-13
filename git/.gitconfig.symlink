@@ -1,9 +1,0 @@
-[user]
-	name = Kevin De Wilde
-	email = kevin.dewilde.ext@seeds-excellence.com
-[core]
-	editor = vim
-[alias]
-    fza = "!git ls-files -m -o --exclude-standard | fzf --print0 -m | xargs -0 -t git add"
-    fzr = "!git diff --name-only --cached | fzf --print0 -m | xargs -0 -t git reset HEAD"
-    fzc = "!git checkout $(git branch | fzf +m)"
