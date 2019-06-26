@@ -31,8 +31,24 @@ Plug 'leafgarland/typescript-vim'
 
 " Initialize plugin system
 call plug#end()
-"""""""""""""""""""""""""""""""
+
 nmap s <Plug>(easymotion-s)
+
+"""""""""""""""""""""""""""""""
+
+
+" Note: Avoids compatibility issues when copying to an external application!
+if has('unnamedplus')
+  set clipboard=unnamedplus
+else
+  set clipboard=unnamed
+endif
+
+" Note: Don't create swap files!
+set noswapfile
+
+" Note: Solve read only problem! Some files opens as read only!
+set ma
 
 """""""""""""""""""""""""""""""
 " FZF settings
@@ -113,9 +129,6 @@ set backspace=indent,eol,start
 set matchpairs+=<:> " use % to jump between pairs
 runtime! macros/matchit.vim
 
-" Move up/down editor lines
-
-set clipboard=unnamedplus
 
 " Search options
 set ignorecase
