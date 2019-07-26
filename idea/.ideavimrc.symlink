@@ -9,7 +9,14 @@ set surround
 nmap s :action KJumpAction<cr>
 
 nmap gh :action ShowNavBar<cr>
+
 nmap gb :action Back<cr>
+nmap gf :action Forward<cr>
+
 nmap gi :action GotoImplementation<cr>
 nmap gu :action ShowUsages<cr>
-nmap gf :action ReformatCode<cr>
+nmap gU :action FindUsages<cr>
+
+nmap gr :action ReformatCode<cr>
+
+nmap gc :action HideAllWindows<cr>

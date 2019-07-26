@@ -28,6 +28,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
+Plug 'dhruvasagar/vim-table-mode'
 
 " Initialize plugin system
 call plug#end()
@@ -70,8 +71,12 @@ nnoremap <silent> <C-l> :Lines<cr>
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+" nmap <silent> gr <Plug>(coc-references)
 """""""""""""""""""""""""""""""
+
+" disable command history (q:)
+nnoremap q: <nop>
+nnoremap Q <nop>
 
 " Turn on syntax highlighting
 syntax on
@@ -167,5 +172,5 @@ set undodir=$HOME/.vim/undo
 set undolevels=1000
 set undoreload=10000
 
-" format json
-nmap gf :%!python -m json.tool<CR>
+" reformat json
+nmap gr :%!python -m json.tool<CR>
