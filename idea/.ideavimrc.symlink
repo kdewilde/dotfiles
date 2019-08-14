@@ -20,3 +20,5 @@ nmap gU :action FindUsages<cr>
 nmap gr :action ReformatCode<cr>
 
 nmap gc :action HideAllWindows<cr>
+
+nnoremap <space><space> :action ShowIntentionActions<cr>
