@@ -31,3 +31,4 @@ alias cdv="cd ~/myprojects/vesta"
 alias watchv="cd ~/myprojects/vesta && lsyncd lsyncd.lua"
 alias codev="code ~/myprojects/vesta/rf-integration/integration-war/src/main/webapp"
 
+alias scdlmix="scdl -l https://soundcloud.com/ikno/sets/checkout-mixes --download-archive ~/memo/soundcloud/archive.txt -c --path ~/share/music"
