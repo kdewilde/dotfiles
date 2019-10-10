@@ -15,6 +15,8 @@ alias rcconf="vim ~/.config/ranger/rc.conf"
 alias postman="~/myapps/Postman/app/Postman &|"
 alias robo3t="~/myapps/robo3t/bin/robo3t &|"
 
+alias gpv="cd ~/myprojects/vesta"
+alias gpc="cd ~/myprojects/ceres"
 alias cdc="cd ~/myprojects/ceres"
 alias cdcf="cd ~/myprojects/ceres/ceres-web/ceres-web-fe/integration/WAR/src/main/webapp/js/ext6"
 alias runc="cd ~/myprojects/ceres/ceres-application-starter/mvnscripts && ./buildAndRunCeres.sh"

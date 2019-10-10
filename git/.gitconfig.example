@@ -4,9 +4,24 @@
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global
+	pager = diff-so-fancy | less --tabs=4 -RFXS
 [alias]
     fza = "!git ls-files -m -o --exclude-standard | fzf --print0 -m | xargs -0 -t git add"
     fzr = "!git diff --name-only --cached | fzf --print0 -m | xargs -0 -t git reset HEAD"
     fzc = "!git checkout $(git branch | fzf +m)"
     fzcr = "!git ls-files -m -o --exclude-standard | fzf --print0 -m | xargs -0 -t git checkout --force"
-
+	dt = difftool
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
