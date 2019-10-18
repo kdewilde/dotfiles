@@ -4,10 +4,11 @@
   export FZF_BASE=$HOME/.fzf
 
 # Set name of the theme to load. 
- ZSH_THEME="powerlevel9k/powerlevel9k"
+# ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="robbyrussell"
 
- POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
- POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+# POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+# POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"

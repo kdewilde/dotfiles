@@ -27,7 +27,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 Plug 'kaicataldo/material.vim'
 " Syntax for different languages
 Plug 'sheerun/vim-polyglot'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+" Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 Plug 'tpope/vim-commentary'
 
 " Plug 'dhruvasagar/vim-table-mode'
