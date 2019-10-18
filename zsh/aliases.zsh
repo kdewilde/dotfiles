@@ -9,7 +9,7 @@ alias r="ranger"
 
 alias vimrc="vim ~/.vimrc"
 alias zshrc="vim ~/.zshrc"
-alias i3conf="vim ~/.config/i3/config"
+alias i3conf="vim ~/.i3/config"
 alias rcconf="vim ~/.config/ranger/rc.conf"
 
 alias postman="~/myapps/Postman/app/Postman &|"
