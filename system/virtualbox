@@ -1,0 +1,47 @@
+share="$HOME/share"
+
+if [ -d $share ] && [[ ! $( grep $share" " /proc/mounts ) ]] 
+then
+    echo "Mounting Virtualbox shared folder under ~/share"
+    sudo mount -t vboxsf share ~/share
+fi
+
+
+
+# if [ -d $share ] && [ `grep -qs $share" " /proc/mounts` ]
+# if [ -d $share ]
+# if [ -d $share ] && [ ! `grep -qs $share" " /proc/mounts` ]
+# then
+#     echo "Mounting Virtualbox shared folder under ~/share"
+#     # sudo mount -t vboxsf share ~/share
+# fi
+
+# foundmounted=$( cat /proc/mounts | grep "/home/ikno/share " )
+
+
+# if [ -d $share ]
+# then
+#     echo "$share folder found"
+# fi
+
+# echo "test"
+
+# if [[ ` ! grep -qs $share" " /proc/mounts` ]]
+# then
+#     echo "$HOME/share was NOT found inside /proc/mounts"
+# fi
+
+
+# if [[ ! $( cat /proc/mounts | grep "/home/ikno/share " ) ]] 
+# then
+#     echo "test"
+#     # echo "$HOME/share was found inside /proc/mounts"
+# fi
+
+
+# if [ -d $share ] && [[ ! $( cat /proc/mounts | grep "/home/ikno/share " ) ]] 
+# if [ -d $share ] && [[ $( grep -qs $share" " /proc/mounts ) -ne 0 ]] 
+# then
+#     echo "Mounting Virtualbox shared folder under ~/share"
+#     sudo mount -t vboxsf share ~/share
+# fi
