@@ -6,12 +6,19 @@ set hlsearch
 nnoremap <esc><esc> :nohls<cr>
 
 set surround
+set commentary
 nmap s :action KJumpAction<cr>
 
 nmap gh :action ShowNavBar<cr>
 
-nmap gb :action Back<cr>
-nmap gf :action Forward<cr>
+" nmap gb :action Back<cr>
+" nmap gf :action Forward<cr>
+
+nmap [c :action VcsShowPrevChangeMarker<cr>
+nmap ]c :action VcsShowNextChangeMarker<cr>
+
+nmap [e :action GotoPreviousError<cr>
+nmap ]e :action GotoNextError<cr>
 
 nmap gi :action GotoImplementation<cr>
 nmap gu :action ShowUsages<cr>
@@ -19,12 +26,11 @@ nmap gU :action FindUsages<cr>
 
 nmap gr :action ReformatCode<cr>
 
-nmap gc :action HideAllWindows<cr>
+nmap <space>c :action HideAllWindows<cr>
 
 nmap gp :action ParameterInfo<cr>
 
-
-nmap gt :action GoToTest<cr>
+nmap gt :action GotoTest<cr>
 nmap tn :action Run<cr>
 nmap tt :action Run<cr>
 nmap tr :action ReRun<cr>

@@ -12,8 +12,8 @@ alias zshrc="vim ~/.zshrc"
 alias i3conf="vim ~/.i3/config"
 alias rcconf="vim ~/.config/ranger/rc.conf"
 
-alias postman="~/myapps/Postman/app/Postman &|"
-alias robo3t="~/myapps/robo3t/bin/robo3t &|"
+# alias postman="~/myapps/Postman/app/Postman &|"
+# alias robo3t="~/myapps/robo3t/bin/robo3t &|"
 
 alias gpv="cd ~/myprojects/vesta"
 alias gpc="cd ~/myprojects/ceres"
