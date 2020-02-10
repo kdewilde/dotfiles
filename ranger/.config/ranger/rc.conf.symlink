@@ -339,6 +339,7 @@ map gP cd ~/myprojects
 map gpp cd ~/myprojects
 map gpv cd ~/myprojects/vesta
 map gpc cd ~/myprojects/ceres
+map gpb cd ~/myprojects/bits-web
 map g. cd ~/dotfiles
 map gd cd ~/Downloads
 map gm cd ~/memo

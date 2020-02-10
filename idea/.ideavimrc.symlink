@@ -28,7 +28,7 @@ nmap gr :action ReformatCode<cr>
 
 nmap <space>c :action HideAllWindows<cr>
 
-nmap gp :action ParameterInfo<cr>
+nmap <space>p :action ParameterInfo<cr>
 
 nmap gt :action GotoTest<cr>
 nmap tn :action Run<cr>
@@ -37,3 +37,5 @@ nmap tr :action ReRun<cr>
 nmap td :action Debug<cr>
 
 nnoremap <space><space> :action ShowIntentionActions<cr>
+
+noremap <space>e :action Console.Jdbc.Execute<cr>
