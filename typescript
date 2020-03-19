@@ -1,193 +1,0 @@
-Script started on 2019-10-17 09:10:06+02:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
-[H[2J[3JThis is the Z Shell configuration function for new users,
-zsh-newuser-install.
-You are seeing this message because you have no zsh startup files
-(the files .zshenv, .zprofile, .zshrc, .zlogin in the directory
-~).  This function can help you with a few settings that should
-make your use of the shell easier.
-
-You can:
-
-(q)  Quit and do nothing.  The function will be run again next time.
-
-(0)  Exit, creating the file ~/.zshrc containing just a comment.
-     That will prevent this function being run again.
-
-(1)  Continue to the main menu.
-
-(2)  Populate your ~/.zshrc with the configuration recommended
-     by the system administrator and exit (you will need to edit
-     the file by hand, if so desired).
-
---- Type one of the keys in parentheses --- q
-[1m[7m%[27m[1m[0m                                                                                [0m[27m[24m[Jnebula-vm% [K[?1h=[?2004hr lls[?1l>[?2004l
-bin    i3	LICENSE.md  ranger     system	   vim	       wallpapers
-fonts  idea	maven	    README.md  termite	   virtualbox  xmodmap
-git    install	proxy	    script     typescript  vscode      zsh
-[1m[7m%[27m[1m[0m                                                                                [0m[27m[24m[Jnebula-vm% [K[?1h=[?2004hlls -al[?1l>[?2004l
-total 96
-drwxr-xr-x 21 erxfi erxfi 4096 Okt 17 09:10 .
-drwxr-xr-x 27 erxfi erxfi 4096 Okt 17 09:09 ..
-drwxr-xr-x  2 erxfi erxfi 4096 Okt 17 09:09 bin
-drwxr-xr-x  3 erxfi erxfi 4096 Okt 17 09:09 fonts
-drwxr-xr-x  8 erxfi erxfi 4096 Okt 17 09:09 .git
-drwxr-xr-x  2 erxfi erxfi 4096 Okt 17 09:09 git
--rw-r--r--  1 erxfi erxfi  253 Okt 17 09:09 .gitignore
-drwxr-xr-x  3 erxfi erxfi 4096 Okt 17 09:09 i3
-drwxr-xr-x  2 erxfi erxfi 4096 Okt 17 09:09 idea
-drwxr-xr-x  2 erxfi erxfi 4096 Okt 17 09:09 install
--rw-r--r--  1 erxfi erxfi 1090 Okt 17 09:09 LICENSE.md
-drwxr-xr-x  2 erxfi erxfi 4096 Okt 17 09:09 maven
-drwxr-xr-x  2 erxfi erxfi 4096 Okt 17 09:09 proxy
-drwxr-xr-x  3 erxfi erxfi 4096 Okt 17 09:09 ranger
--rw-r--r--  1 erxfi erxfi 2153 Okt 17 09:09 README.md
-drwxr-xr-x  2 erxfi erxfi 4096 Okt 17 09:09 script
-drwxr-xr-x  2 erxfi erxfi 4096 Okt 17 09:09 system
-drwxr-xr-x  3 erxfi erxfi 4096 Okt 17 09:09 termite
--rw-r--r--  1 erxfi erxfi    0 Okt 17 09:10 typescript
-drwxr-xr-x  2 erxfi erxfi 4096 Okt 17 09:09 vim
-drwxr-xr-x  2 erxfi erxfi 4096 Okt 17 09:09 virtualbox
-drwxr-xr-x  3 erxfi erxfi 4096 Okt 17 09:09 vscode
-drwxr-xr-x  2 erxfi erxfi 4096 Okt 17 09:09 wallpapers
-drwxr-xr-x  2 erxfi erxfi 4096 Okt 17 09:09 xmodmap
-drwxr-xr-x  2 erxfi erxfi 4096 Okt 17 09:09 zsh
-[1m[7m%[27m[1m[0m                                                                                [0m[27m[24m[Jnebula-vm% [K[?1h=[?2004hr[?1l>[?2004l
-ls -al
-total 96
-drwxr-xr-x 21 erxfi erxfi 4096 Okt 17 09:10 .
-drwxr-xr-x 27 erxfi erxfi 4096 Okt 17 09:09 ..
-drwxr-xr-x  2 erxfi erxfi 4096 Okt 17 09:09 bin
-drwxr-xr-x  3 erxfi erxfi 4096 Okt 17 09:09 fonts
-drwxr-xr-x  8 erxfi erxfi 4096 Okt 17 09:09 .git
-drwxr-xr-x  2 erxfi erxfi 4096 Okt 17 09:09 git
--rw-r--r--  1 erxfi erxfi  253 Okt 17 09:09 .gitignore
-drwxr-xr-x  3 erxfi erxfi 4096 Okt 17 09:09 i3
-drwxr-xr-x  2 erxfi erxfi 4096 Okt 17 09:09 idea
-drwxr-xr-x  2 erxfi erxfi 4096 Okt 17 09:09 install
--rw-r--r--  1 erxfi erxfi 1090 Okt 17 09:09 LICENSE.md
-drwxr-xr-x  2 erxfi erxfi 4096 Okt 17 09:09 maven
-drwxr-xr-x  2 erxfi erxfi 4096 Okt 17 09:09 proxy
-drwxr-xr-x  3 erxfi erxfi 4096 Okt 17 09:09 ranger
--rw-r--r--  1 erxfi erxfi 2153 Okt 17 09:09 README.md
-drwxr-xr-x  2 erxfi erxfi 4096 Okt 17 09:09 script
-drwxr-xr-x  2 erxfi erxfi 4096 Okt 17 09:09 system
-drwxr-xr-x  3 erxfi erxfi 4096 Okt 17 09:09 termite
--rw-r--r--  1 erxfi erxfi    0 Okt 17 09:10 typescript
-drwxr-xr-x  2 erxfi erxfi 4096 Okt 17 09:09 vim
-drwxr-xr-x  2 erxfi erxfi 4096 Okt 17 09:09 virtualbox
-drwxr-xr-x  3 erxfi erxfi 4096 Okt 17 09:09 vscode
-drwxr-xr-x  2 erxfi erxfi 4096 Okt 17 09:09 wallpapers
-drwxr-xr-x  2 erxfi erxfi 4096 Okt 17 09:09 xmodmap
-drwxr-xr-x  2 erxfi erxfi 4096 Okt 17 09:09 zsh
-[1m[7m%[27m[1m[0m                                                                                [0m[27m[24m[Jnebula-vm% [K[?1h=[?2004hrranger[?1l>[?2004l
-[?1049h[22;0;0t[1;24r(B[m[4l[?7h[?1h=[?25l[39;49m[?1000h[39;49m(B[m[H[2J
-[J[Aloading...[K[?1h=[?1000h(B[0;1m[92merxfi@nebula-vm [94m/home/erxfi/dotfiles/[37mbin[K
-[91m [94mDesktop [39m(B[m (B[0;1;7m[94m bin                       7 [39m(B[m ...
-(B[0;1m[91m [94mDocumen~[39m(B[m (B[0;1m[91m [94mfonts[21X[3;38H2 
-(B[0;1;7m[94m dotfiles[39m(B[m (B[0;1m[91m [94mgit[23X[4;38H2 
-[91m [94mDownloa~[39m(B[m (B[0;1m[91m [94mi3[24X[5;38H2 
-[91m [94mMusic   [39m(B[m (B[0;1m[91m [94midea[22X[6;38H1 
-[91m [94mPictures[39m(B[m (B[0;1m[91m [94minstall[19X[7;38H2 
-[91m [94mPublic  [39m(B[m (B[0;1m[91m [94mmaven[21X[8;38H1 
-[91m [94mshared-~[39m(B[m (B[0;1m[91m [94mproxy[21X[9;38H1 
-[91m [94msnap    [39m(B[m (B[0;1m[91m [94mranger[20X[10;38H1 
-[91m [94mTemplat~[39m(B[m (B[0;1m[91m [94mscript[20X[11;38H1 
-[91m [94mtmp     [39m(B[m (B[0;1m[91m [94msystem[20X[12;38H4 
-[91m [94mVideos  [39m(B[m (B[0;1m[91m [94mtermite[19X[13;38H1 [14;11H[91m [94mvim[23X[14;38H2 [15;11H[91m [94mvirtualbox[16X[15;38H1 [16;11H[91m [94mvscode[20X[16;38H1 [17;11H[91m [94mwallpapers[16X[17;38H1 [18;11H[91m [94mxmodmap[19X[18;38H1 [19;11H[91m [94mzsh[23X[19;38H4 [20;11H[91m (B[0mLICENSE.md[20;33H1.06 K[21;11H(B[0;1m[91m (B[0mREADME.md[21;34H2.1 K[22;11H(B[0;1m[91m (B[0mtypescript[22;36H4 K
-
-[36mdrwxr-xr-x[39m 2 erxfi erxfi 7 2019-10-17 09:09[50G7.41K sum, 110G free  1/21  Al[?7ll[?7h[1;11H(B[m
-[2;41H(B[0;1;7m[92m diff-so-fancy                          [3;41H(B[0;1m[91m [92me[K
-[91m [92mextract[K[5;41H[91m [92mgit-delete-local-merged[K[6;41H[91m [92mgit-undo[K[7;41H[91m [92mmemo[K
-[41G[91m [92mmemof[K[2;11H[39m(B[m[1;38H(B[0;1m[37mfonts[2;11H[91m [94mbin[23X[2;38H7 [39m(B[m ...(B[m[K[3;11H(B[0;1;7m[94m fonts                     2 [39m(B[m[K
- [K
-[K
-[K
-[K
-[K[24;12H3[24;26H2[24;72H2[2;11H(B[m
-[2;41H(B[0;7m readme.md                              [3;11H(B[m[1;38H(B[0;1m[37mgit[K
-(B[0m...(B[m[K[3;11H(B[0;1m[91m [94mfonts[21X[3;38H2 [4;11H(B[0;1;7m[94m git                       2 [24;12H(B[0m2[24;72H3[3;11H(B[m
-[2;41H(B[0;7m README.md                              [4;11H(B[m[1;38H(B[0;1m[37mi3[K
-[C(B[0m...(B[m[K[4;11H(B[0;1m[91m [94mgit[23X[4;38H2 [5;11H(B[0;1;7m[94m i3                        2 [24;12H(B[0m3[24;72H4[4;11H(B[m
-[2;41H[41mempty[5;11H[49m(B[m[1;39H(B[0;1m[37mdea
-(B[0m...(B[m[K[5;11H(B[0;1m[91m [94mi3[24X[5;38H2 [6;11H(B[0;1;7m[94m idea                      1 [24;12H(B[0m2[24;26H1[24;72H5[5;11H(B[m
-[2;41H[41mempty[6;11H[49m(B[m[1;39H(B[0;1m[37mnstall
-(B[0m...(B[m[K[6;11H(B[0;1m[91m [94midea[22X[6;38H1 [7;11H(B[0;1;7m[94m install                   2 [24;26H(B[0m2[24;72H6[6;11H(B[m
-[2;41H(B[0;7m install                                [3;41H(B[0;1m[91m (B[0minstalls.md[7;11H(B[m[1;38H(B[0;1m[37mmaven[K
-(B[0m...(B[m[K
-[K[7;11H(B[0;1m[91m [94minstall[19X[7;38H2 [8;11H(B[0;1;7m[94m maven                     1 [24;26H(B[0m1[24;72H7[7;11H(B[m
-[2;41H(B[0;7m path.zsh                               [8;11H(B[m[1;38H(B[0;1m[37mproxy
-(B[0m...(B[m[K[8;11H(B[0;1m[91m [94mmaven[21X[8;38H1 [9;11H(B[0;1;7m[94m proxy                     1 [24;72H(B[0m8[8;11H(B[m
-[2;41H(B[0;7m readme.md                              [9;11H(B[m[1;38H(B[0;1m[37mranger
-(B[0m...(B[m[K[9;11H(B[0;1m[91m [94mproxy[21X[9;38H1 [10;11H(B[0;1;7m[94m ranger                    1 [24;12H(B[0m3[24;72H9[9;11H(B[m
-[2;41H[41mempty[10;11H[49m(B[m[1;38H(B[0;1m[37mscript
-(B[0m...(B[m[K[10;11H(B[0;1m[91m [94mranger[20X[10;38H1 [11;11H(B[0;1;7m[94m script                    1 [24;12H(B[0m2[24;49H7.41K sum, 110G free  10[10;11H(B[m
-[2;41H(B[0;1;7m[92m symlink                                [11;11H[39m(B[m[1;38H(B[0;1m[94mscript/[37msymlink
-[C[94mbin     [39m(B[m (B[0;1;7m[92m symlink              2.79 K [39m(B[m[K
-[C(B[0;1m[94mfonts   [39m(B[m[K
-(B[0;1m[91m [94mgit     [39m(B[m[K
-[C(B[0;1m[94mi3      [39m(B[m[K
-[C(B[0;1m[94midea    [39m(B[m[K
-[C(B[0;1m[94minstall [39m(B[m[K
-[C(B[0;1m[94mmaven   [39m(B[m[K
-[C(B[0;1m[94mproxy   [39m(B[m[K
-[C(B[0;1m[94mranger  [39m(B[m[K
-(B[0;1;7m[94m script  [39m(B[m[K
-[C(B[0;1m[94msystem  [39m(B[m[K
-[C(B[0;1m[94mtermite [39m(B[m[K
-(B[0;1m[91m [94mvim     [39m(B[m[K
-(B[0;1m[91m [94mvirtual~[39m(B[m[K
-(B[0;1m[91m [94mvscode  [39m(B[m[K
-(B[0;1m[91m [94mwallpap~[39m(B[m[K
-(B[0;1m[91m [94mxmodmap [39m(B[m[K
-(B[0;1m[91m [94mzsh     [39m(B[m[K
-(B[0;1m[91m (B[0mLICE~.md(B[m[K
-(B[0;1m[91m (B[0mREAD~.md(B[m[K
-(B[0;1m[91m (B[0mtypescr~(B[m[K
-
-[36m-[24;12H[39m1[24;26H2.79K 2019-10-17 09:09   2.79K sum, 110G free  1/[11;11H(B[m[2;11H[2;41H#!/usr/bin/env bash[3;41H#
-# bootstrap installs things.[6;41Hcd "$(dirname "$0")/.."[7;41HDOTFILES_ROOT=$(pwd -P)[9;41Hset -e[11;41Hecho ''[13;41Hinfo () {[14;43Hprintf "\r  [ \033[00;34m..\033[0m ] $[15;41H}
-
-user () {[18;43Hprintf "\r  [ \033[0;33m??\033[0m ] $1[19;41H}
-
-success () {[22;43Hprintf "\r\033[2K  [ \033[00;32mOK\033[23;41H}[2;11H(B[m[?1l>[?12l[?25h[?1000l[24;1H[?1049l[23;0;0t[?1l>[H[2J[3JThis is the Z Shell configuration function for new users,
-zsh-newuser-install.
-You are seeing this message because you have no zsh startup files
-(the files .zshenv, .zprofile, .zshrc, .zlogin in the directory
-~).  This function can help you with a few settings that should
-make your use of the shell easier.
-
-You can:
-
-(q)  Quit and do nothing.  The function will be run again next time.
-
-(0)  Exit, creating the file ~/.zshrc containing just a comment.
-     That will prevent this function being run again.
-
-(1)  Continue to the main menu.
-
-(2)  Populate your ~/.zshrc with the configuration recommended
-     by the system administrator and exit (you will need to edit
-     the file by hand, if so desired).
-
---- Type one of the keys in parentheses --- q
-[1m[7m%[27m[1m[0m                                                                                [0m[27m[24m[Jnebula-vm% [K[?1h=[?2004h[?1l>[?2004l
-[1m[7m%[27m[1m[0m                                                                                [0m[27m[24m[Jnebula-vm% [K[?1h=[?2004h../symlink[1m [0m[0m [?1l>[?2004l
-
-  [ [00;34m..[0m ] setup gitconfig
-  [ [0;33m??[0m ]  - What is your github author name?
-k[KKevin De Wilde
-  [ [0;33m??[0m ]  - What is your github author email?
-kevin.dewilde.e[K[K@partners.basf.net
-sed: can't read git/gitconfig.local.symlink.example: No such file or directory
-[1m[7m%[27m[1m[0m                                                                                [0m[27m[24m[Jnebula-vm% [K[?1h=[?2004h./symlink[?1l>[?2004l
-
-  [ [00;34m..[0m ] setup gitconfig
-  [ [0;33m??[0m ]  - What is your github author name?
-Kevin De Wilde
-  [ [0;33m??[0m ]  - What is your github author email?
-kevin.dewilde@partners.basf.net
-sed: can't read git/gitconfig.local.symlink.example: No such file or directory
-[1m[7m%[27m[1m[0m                                                                                [0m[27m[24m[Jnebula-vm% [K[?1h=[?2004h[H[2J[0m[27m[24m[Jnebula-vm% [K./symlink[?1l>[?2004l
-
-  [ [00;34m..[0m ] installing dotfiles
-[2K  [ [00;32mOK[0m ]
