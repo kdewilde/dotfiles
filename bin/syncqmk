@@ -1,0 +1,1 @@
+mkdir -p $SHARE_HOME/qmk && cp $QMK_HOME/qmk_firmware/.build/*.hex -t $SHARE_HOME/qmk
