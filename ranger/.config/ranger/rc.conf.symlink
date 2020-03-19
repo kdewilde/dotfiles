@@ -335,15 +335,17 @@ map ]     move_parent 1
 map [     move_parent -1
 map }     traverse
 
-map gP cd ~/myprojects
-map gpp cd ~/myprojects
-map gpv cd ~/myprojects/vesta
-map gpc cd ~/myprojects/ceres
-map gpb cd ~/myprojects/bits-web
-map g. cd ~/dotfiles
+map gP eval fm.cd(os.getenv('PROJECTS_HOME'))
+map gpp eval fm.cd(os.getenv('PROJECTS_HOME'))
+map gpv eval fm.cd(os.getenv('PROJECTS_HOME'))/vesta
+map gpc eval fm.cd(os.getenv('PROJECTS_HOME'))/ceres
+map gpb eval fm.cd(os.getenv('PROJECTS_HOME'))/bits-web
+map g. eval fm.cd(os.getenv('DOT_HOME'))
+map gm eval fm.cd(os.getenv('MEMO_HOME'))
+map gs eval fm.cd(os.getenv('SHARE_HOME'))
+map gk eval fm.cd(os.getenv('QMK_HOME'))
+map gq eval fm.cd(os.getenv('QMK_HOME'))
 map gd cd ~/Downloads
-map gm cd ~/memo
-map gs cd ~/share
 
 map gh cd ~
 map ge cd /etc
@@ -353,6 +355,7 @@ map gl cd -r .
 map gL cd -r %f
 map go cd /opt
 map gv cd /var
+map gi eval fm.cd('/run/media/' + os.getenv('USER'))
 # map gm cd /media
 map gM cd /mnt
 # map gs cd /srv
