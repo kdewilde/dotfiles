@@ -18,28 +18,33 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'vim-airline/vim-airline'
+
 Plug 'tpope/vim-surround'
 Plug 'easymotion/vim-easymotion'
+
+" FZF
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
+" Git
 Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
-Plug 'mboughaba/i3config.vim'
+" Plug 'tpope/vim-fugitive'
+
 " material theme
 Plug 'kaicataldo/material.vim'
+
 " Syntax for different languages
 Plug 'sheerun/vim-polyglot'
+
+" Commenting
 Plug 'tpope/vim-commentary'
 
+" CoC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
-" Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-vetur', {'do': 'yarn install --frozen-lockfile'}
 
-" Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
-" Plug 'dhruvasagar/vim-table-mode'
-" Plug 'SirVer/ultisnips'
-" Plug 'tpope/vim-commentary'
-" Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
 " Initialize plugin system
 call plug#end()
@@ -87,8 +92,6 @@ nnoremap <silent> <C-e> :Buffers<cr>
 nnoremap <silent> <C-l> :Lines<cr>
 nnoremap <silent> <C-F> :Ag<cr>
 " nnoremap <silent> <C-p> :Files<cr>
-" nnoremap <silent> <C-e> :Buffers<cr>
-" nnoremap <silent> <C-l> :Lines<cr>
 """""""""""""""""""""""""""""""
 
 aug i3config_ft_detection
@@ -100,20 +103,20 @@ aug end
 "" CoC settings
 """"""""""""""""""""""""""""""""
 "" if hidden is not set, TextEdit might fail.
-"set hidden
+set hidden
 
 "" Some servers have issues with backup files, see #649
-"set nobackup
-"set nowritebackup
+set nobackup
+set nowritebackup
 
 "" Better display for messages
 set cmdheight=2
 
 "" You will have bad experience for diagnostic messages when it's default 4000.
-"set updatetime=300
+set updatetime=300
 
 "" don't give |ins-completion-menu| messages.
-"set shortmess+=c
+set shortmess+=c
 
 "" always show signcolumns
 "set signcolumn=yes" Use tab for trigger completion with characters ahead and navigate.
@@ -130,7 +133,7 @@ set cmdheight=2
 "endfunction
 
 "" Use <c-space> to trigger completion.
-"inoremap <silent><expr> <c-space> coc#refresh()
+inoremap <silent><expr> <c-space> coc#refresh()
 
 "" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
 "" Coc only does snippet and additional edit on confirm.
@@ -139,14 +142,14 @@ set cmdheight=2
 "" inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
 
 "" Use `[g` and `]g` to navigate diagnostics
-"nmap <silent> [g <Plug>(coc-diagnostic-prev)
-"nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 "" Remap keys for gotos
-"nmap <silent> gd <Plug>(coc-definition)
-"nmap <silent> gy <Plug>(coc-type-definition)
-"nmap <silent> gi <Plug>(coc-implementation)
-"nmap <silent> gr <Plug>(coc-references)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 "" Use K to show documentation in preview window
 "nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -160,10 +163,10 @@ set cmdheight=2
 "endfunction
 
 "" Highlight symbol under cursor on CursorHold
-"autocmd CursorHold * silent call CocActionAsync('highlight')
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 "" Remap for rename current word
-"nmap <leader>rn <Plug>(coc-rename)
+nmap <leader>rn <Plug>(coc-rename)
 
 "" Remap for format selected region
 "xmap <leader>f  <Plug>(coc-format-selected)
@@ -177,20 +180,11 @@ runtime macros/matchit.vim
 nnoremap q: <nop>
 nnoremap Q <nop>
 
-" enable gb to go back through jumplist history
-noremap gb <c-O>
-noremap gf <c-I>
-
 " Turn on syntax highlighting
 syntax on
 
 " TODO: Pick a leader key
 let mapleader = " "
-
-" Tab between buffers
-" This overrides tab behaviour and won't allow CTRL-I to go forward in jumplist
-" noremap <tab> <c-w>w
-" noremap <S-tab> <c-w>W
 
 " Switch between last two buffers
 nnoremap <leader><leader> <C-^>
@@ -234,6 +228,7 @@ set breakindentopt=shift:2,min:40,sbr
 set showbreak=↪\ 
 
 autocmd Filetype json setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd Filetype vue setlocal foldmethod=indent
 
 " Cursor motion
 set scrolloff=3
@@ -302,7 +297,7 @@ function! ToggleSpecFile()
   endif
 endfunction
 
-nnoremap <silent> <leader>sp :call ToggleSpecFile()<CR>
+nnoremap <silent> gt :call ToggleSpecFile()<CR>
 
 function! TestCurrentFile()
   if filereadable(@%)
