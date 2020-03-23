@@ -40,7 +40,6 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-# bindsym $mod+space exec i3-sensible-terminal
 bindsym $mod+space exec termite
 
 # kill focused window
@@ -213,3 +212,5 @@ exec --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/wall.jpg
 
 # exec --no-startup-id i3-msg 'workspace '$workspace5'; exec chromium --proxy-pac-url=http://pac.zscloud.net/seeds-excellence.com/Seeds_PAC'
 # exec --no-startup-id i3-msg 'workspace '$workspace4'; exec chromium --proxy-pac-url=http://pac.zscloud.net/seeds-excellence.com/Seeds_PAC'
+
+exec --no-startup-id ~/dotfiles/system/virtualbox

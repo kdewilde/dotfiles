@@ -1,18 +1,23 @@
 # refresh mirror list
-    yaourt -Sy
-
-# install Visual Code
-    yaourt -S visual-studio-code-bin
+    pacman -Syu
 
 # install Chromium
-    yaourt chromium
+    pacman -S chromium
 
-# install Pathogen (vim plugins)
-    yaourt pathogen
+# install Virtualbox Guest Utils
+    pacman -S virtualbox-guest-utils
 
-# install vim-easymotion
-    git clone https://github.com/easymotion/vim-easymotion ~/.vim/bundle/vim-easymotion
+# install feh
+    pacman -S feh
 
-# install fzf
-   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-   ~/.fzf/install
+# install Node
+    pacman -S nodejs
+
+# install npm
+    pacman -S npm
+
+# install nvm (node version manager)
+    pacman -S nvm
+
+# install gvim (enable + clipboard for vim)
+    pacman -S gvim
