@@ -337,9 +337,9 @@ map }     traverse
 
 map gP eval fm.cd(os.getenv('PROJECTS_HOME'))
 map gpp eval fm.cd(os.getenv('PROJECTS_HOME'))
-map gpv eval fm.cd(os.getenv('PROJECTS_HOME'))/vesta
-map gpc eval fm.cd(os.getenv('PROJECTS_HOME'))/ceres
-map gpb eval fm.cd(os.getenv('PROJECTS_HOME'))/bits-web
+map gpv eval fm.cd(os.getenv('PROJECTS_HOME') + '/vesta')
+map gpc eval fm.cd(os.getenv('PROJECTS_HOME') + '/ceres')
+map gpb eval fm.cd(os.getenv('PROJECTS_HOME') + '/bits-web')
 map g. eval fm.cd(os.getenv('DOT_HOME'))
 map gm eval fm.cd(os.getenv('MEMO_HOME'))
 map gs eval fm.cd(os.getenv('SHARE_HOME'))
