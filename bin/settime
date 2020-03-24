@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo -e "\033[0;34mGive a timestamp(YY-MM-DD HH:MM:SS):\033[0m"
+read -r timestamp
+
+timedatectl set-time "$timestamp"
