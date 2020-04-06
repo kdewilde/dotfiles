@@ -24,8 +24,9 @@ alias cdc="cd $PROJECTS_HOME/ceres"
 
 # CERES
 alias cdcf="cd $PROJECTS_HOME/ceres/ceres-web/ceres-web-fe/integration/WAR/src/main/webapp/js/ext6"
-alias runc="cd $PROJECTS_HOME/ceres/ceres-application-starter/mvnscripts && ./buildAndRunCeres.sh"
+alias runc="killjboss & cd $PROJECTS_HOME/ceres/ceres-application-starter/mvnscripts && ./buildAndRunCeres.sh"
 alias watchc="cd $PROJECTS_HOME/ceres && lsyncd lsyncd.lua"
+alias logc="vim $PROJECTS_HOME/ceres/ceres-application-starter/ceres/target/ceres-war.log"
 
 # VP
 alias runvp="cd $PROJECTS_HOME/vectoring-platform/vectoring-platform/integration/war && mvn cargo:run -o -Pdevelopment"
