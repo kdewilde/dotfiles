@@ -17,31 +17,32 @@ alias scdlmix="scdl -l https://soundcloud.com/ikno/sets/checkout-mixes --downloa
 # alias postman="~/myapps/Postman/app/Postman &|"
 # alias robo3t="~/myapps/robo3t/bin/robo3t &|"
 
-alias gpv="cd ~/myprojects/vesta"
-alias gpc="cd ~/myprojects/ceres"
-alias gpb="cd ~/myprojects/bits-web"
-alias cdc="cd ~/myprojects/ceres"
+alias gpv="cd $PROJECTS_HOME/vesta"
+alias gpc="cd $PROJECTS_HOME/ceres"
+alias gpb="cd $PROJECTS_HOME/bits-web"
+alias cdc="cd $PROJECTS_HOME/ceres"
 
 # CERES
-alias cdcf="cd ~/myprojects/ceres/ceres-web/ceres-web-fe/integration/WAR/src/main/webapp/js/ext6"
-alias runc="cd ~/myprojects/ceres/ceres-application-starter/mvnscripts && ./buildAndRunCeres.sh"
-alias watchc="cd ~/myprojects/ceres && lsyncd lsyncd.lua"
+alias cdcf="cd $PROJECTS_HOME/ceres/ceres-web/ceres-web-fe/integration/WAR/src/main/webapp/js/ext6"
+alias runc="killjboss & cd $PROJECTS_HOME/ceres/ceres-application-starter/mvnscripts && ./buildAndRunCeres.sh"
+alias watchc="cd $PROJECTS_HOME/ceres && lsyncd lsyncd.lua"
+alias logc="vim $PROJECTS_HOME/ceres/ceres-application-starter/ceres/target/ceres-war.log"
 
 # VP
-alias runvp="cd ~/myprojects/vectoring-platform/vectoring-platform/integration/war && mvn cargo:run -o -Pdevelopment"
-alias cdvp="cd ~/myprojects/vectoring-platform"
-alias watchvp="cd ~/myprojects/vectoring-platform && lsyncd lsyncd.lua"
+alias runvp="cd $PROJECTS_HOME/vectoring-platform/vectoring-platform/integration/war && mvn cargo:run -o -Pdevelopment"
+alias cdvp="cd $PROJECTS_HOME/vectoring-platform"
+alias watchvp="cd $PROJECTS_HOME/vectoring-platform && lsyncd lsyncd.lua"
 
 # VESTA
-alias runv="cd ~/myprojects/vesta/rf-integration/integration-war && mvn cargo:run -o"
-alias cdv="cd ~/myprojects/vesta"
-alias watchv="cd ~/myprojects/vesta && lsyncd lsyncd.lua"
+alias runv="cd $PROJECTS_HOME/vesta/rf-integration/integration-war && mvn cargo:run -o"
+alias cdv="cd $PROJECTS_HOME/vesta"
+alias watchv="cd $PROJECTS_HOME/vesta && lsyncd lsyncd.lua"
 
 # BITS
-alias buildb="cd ~/myprojects/bits-web && mvn clean package"
-alias runb="cd ~/myprojects/bits-web && mvn cargo:run"
-alias cdb="cd ~/myprojects/bits-web"
-alias watchb="cd ~/myprojects/bits-web && lsyncd lsyncd.lua"
+alias buildb="cd $PROJECTS_HOME/bits-web && mvn clean package"
+alias runb="cd $PROJECTS_HOME/bits-web && mvn cargo:run"
+alias cdb="cd $PROJECTS_HOME/bits-web"
+alias watchb="cd $PROJECTS_HOME/bits-web && lsyncd lsyncd.lua"
 
 alias gP="cd $PROJECTS_HOME"
 alias gpp="cd $PROJECTS_HOME"

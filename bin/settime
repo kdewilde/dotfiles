@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ -z "$1" ] 
+then
+    echo -e "\033[0;34mGive a timestamp(YYYY-MM-DD HH:MM:SS):\033[0m"
+else 
+    timestamp="$1"
+    # read -r timestamp
+
+    timedatectl set-time "$timestamp"
+fi

@@ -16,6 +16,7 @@ nmap gh :action ShowNavBar<cr>
 
 nmap [c :action VcsShowPrevChangeMarker<cr>
 nmap ]c :action VcsShowNextChangeMarker<cr>
+nmap <space>r :action Vcs.RollbackChangedLines<cr>
 
 nmap [e :action GotoPreviousError<cr>
 nmap ]e :action GotoNextError<cr>
@@ -24,11 +25,6 @@ nmap gi :action GotoImplementation<cr>
 nmap gu :action ShowUsages<cr>
 nmap gU :action FindUsages<cr>
 
-nmap gr :action ReformatCode<cr>
-
-nmap <space>c :action HideAllWindows<cr>
-
-nmap <space>p :action ParameterInfo<cr>
 
 nmap gt :action GotoTest<cr>
 nmap tn :action Run<cr>
@@ -38,4 +34,13 @@ nmap td :action Debug<cr>
 
 nnoremap <space><space> :action ShowIntentionActions<cr>
 
-noremap <space>e :action Console.Jdbc.Execute<cr>
+nnoremap <C-o> :action Back<cr>
+nnoremap <C-i> :action Forward<cr>
+
+nnoremap <space>f :action ReformatCode<cr>
+nnoremap <space>c :action HideAllWindows<cr>
+nnoremap <space>p :action ParameterInfo<cr>
+nnoremap <space>e :action Console.Jdbc.Execute<cr>
+nnoremap <space>v :action IntroduceVariable<cr>
+nnoremap <space>g :action Generate<cr>
+nnoremap <space>b :action CompileDirty<cr>
