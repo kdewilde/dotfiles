@@ -19,7 +19,7 @@ alias scdlmix="scdl -l https://soundcloud.com/ikno/sets/checkout-mixes --downloa
 
 alias gpv="cd $PROJECTS_HOME/vesta"
 alias gpc="cd $PROJECTS_HOME/ceres"
-alias gpb="cd $PROJECTS_HOME/bits-web"
+alias gpb="cd $PROJECTS_HOME/bits"
 alias cdc="cd $PROJECTS_HOME/ceres"
 
 # CERES
@@ -39,8 +39,8 @@ alias cdv="cd $PROJECTS_HOME/vesta"
 alias watchv="cd $PROJECTS_HOME/vesta && lsyncd lsyncd.lua"
 
 # BITS
-alias buildb="cd $PROJECTS_HOME/bits-web && mvn clean package"
-alias runb="cd $PROJECTS_HOME/bits-web && mvn cargo:run"
-alias cdb="cd $PROJECTS_HOME/bits-web"
-alias watchb="cd $PROJECTS_HOME/bits-web && lsyncd lsyncd.lua"
+alias buildb="cd $PROJECTS_HOME/bits && mvn clean package"
+alias runb="cd $PROJECTS_HOME/bits && mvn cargo:run"
+alias cdb="cd $PROJECTS_HOME/bits"
+alias watchb="cd $PROJECTS_HOME/bits && lsyncd lsyncd.lua"
 
