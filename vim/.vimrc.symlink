@@ -26,6 +26,9 @@ Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
+" indentation
+Plug 'jeetsukumaran/vim-indentwise'
+
 " Git
 Plug 'airblade/vim-gitgutter'
 " Plug 'tpope/vim-fugitive'
@@ -169,8 +172,8 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nmap <leader>rn <Plug>(coc-rename)
 
 "" Remap for format selected region
-"xmap <leader>f  <Plug>(coc-format-selected)
-"nmap <leader>f  <Plug>(coc-format-selected)
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
 """""""""""""""""""""""""""""""
 " enable matchit plugin to match html tags with %
 filetype plugin on
@@ -220,6 +223,7 @@ set tabstop=4       " The width of a TAB is set to 4.
 set shiftwidth=4    " Indents with '>' will have a width of 4.
 set softtabstop=4   " Sets the number of columns for a TAB.
 set expandtab       " Expand TABs to spaces.
+set sidescroll=1    " When scrolling sideways move 1 char instead of half window
 
 set breakindent     " enable indentation
 " ident by an additional 2 characters on wrapped lines, when line >= 40 characters, put 'showbreak' at start of line
