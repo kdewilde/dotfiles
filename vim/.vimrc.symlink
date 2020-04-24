@@ -26,6 +26,10 @@ Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
+" Markdown
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+
 " indentation
 Plug 'jeetsukumaran/vim-indentwise'
 
@@ -218,7 +222,7 @@ set encoding=utf-8
 
 " Whitespace
 set wrap!
-set textwidth=79
+" set textwidth=79
 set formatoptions=tcqrn1
 set noshiftround
 set tabstop=4       " The width of a TAB is set to 4.
@@ -253,6 +257,9 @@ set smartcase
 set incsearch
 set hlsearch
 nnoremap <esc><esc> :nohls<cr>
+
+" Markdown fenced code block syntax highlighting
+let g:markdown_fenced_languages = ['javascript=js', 'vim', 'html', 'python', 'bash=sh']
 
 " Folding options
 set foldmethod=syntax

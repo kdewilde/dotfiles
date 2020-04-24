@@ -12,7 +12,12 @@
 #   # => opens the specified file in $EDITOR (used to create)
 if [ $# -eq 0 ]
     then
-    selectedMemo=$(find ~/memo -type f -not -path '*/.git/*' | fzf --preview 'cat {}')
+    if hash bat 2>/dev/null; then
+        preview="bat --style=numbers --color=always {} | head -500";
+    else
+        preview="cat {}";
+    fi
+    selectedMemo=$(find ~/memo -type f -not -path '*/.git/*' | fzf --preview "$preview")
     if [ $selectedMemo ]
         then vim $selectedMemo
     fi
