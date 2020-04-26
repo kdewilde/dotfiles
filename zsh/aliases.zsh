@@ -17,11 +17,6 @@ alias scdlmix="scdl -l https://soundcloud.com/ikno/sets/checkout-mixes --downloa
 # alias postman="~/myapps/Postman/app/Postman &|"
 # alias robo3t="~/myapps/robo3t/bin/robo3t &|"
 
-alias gpv="cd $PROJECTS_HOME/vesta"
-alias gpc="cd $PROJECTS_HOME/ceres"
-alias gpb="cd $PROJECTS_HOME/bits-web"
-alias cdc="cd $PROJECTS_HOME/ceres"
-
 # CERES
 alias cdcf="cd $PROJECTS_HOME/ceres/ceres-web/ceres-web-fe/integration/WAR/src/main/webapp/js/ext6"
 alias runc="killjboss & cd $PROJECTS_HOME/ceres/ceres-application-starter/mvnscripts && ./buildAndRunCeres.sh"
@@ -39,16 +34,17 @@ alias cdv="cd $PROJECTS_HOME/vesta"
 alias watchv="cd $PROJECTS_HOME/vesta && lsyncd lsyncd.lua"
 
 # BITS
-alias buildb="cd $PROJECTS_HOME/bits-web && mvn clean package"
-alias runb="cd $PROJECTS_HOME/bits-web && mvn cargo:run"
-alias cdb="cd $PROJECTS_HOME/bits-web"
-alias watchb="cd $PROJECTS_HOME/bits-web && lsyncd lsyncd.lua"
+alias buildb="cd $PROJECTS_HOME/bits && mvn clean package"
+alias runb="cd $PROJECTS_HOME/bits && mvn cargo:run"
+alias cdb="cd $PROJECTS_HOME/bits"
+alias watchb="cd $PROJECTS_HOME/bits && lsyncd lsyncd.lua"
 
+# TODO CHECK THESE FOR ZSH GIT MAPPING CONFLICTS
 alias gP="cd $PROJECTS_HOME"
 alias gpp="cd $PROJECTS_HOME"
 alias gpv="cd $PROJECTS_HOME/vesta"
 alias gpc="cd $PROJECTS_HOME/ceres"
-alias gpb="cd $PROJECTS_HOME/bits-web"
+alias gpb="cd $PROJECTS_HOME/bits"
 alias g.="cd $DOT_HOME"
 alias gm="cd $MEMO_HOME"
 alias gs="cd $SHARE_HOME"
