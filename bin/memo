@@ -10,9 +10,14 @@
 #
 #   $ memo <name>
 #   # => opens the specified file in $EDITOR (used to create)
+#
+# TODO:
+# * don't show ~/memo path inside fzf window
+# * exit terminal when no file was selected
+#
 if [ $# -eq 0 ]
     then
-    selectedMemo=$(find ~/memo -type f -not -path '*/.git/*' | fzf --preview 'cat {}')
+    selectedMemo=$(find ~/memo -type f -not -path '*/.git/*' | fzf --preview 'bat --style=numbers --color=always {} | head -500')
     if [ $selectedMemo ]
         then vim $selectedMemo
     fi
