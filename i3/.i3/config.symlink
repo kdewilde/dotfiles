@@ -103,7 +103,7 @@ bindsym $mod+minus scratchpad show, [instance="__scratchpad"] move position cent
 # for_window [instance="_scratchpad_"] move scratchpad, move absolute position 680 31, resize set 1200 600
 # Show the sup-mail scratchpad window, if any.
 bindsym mod+m [title="^Sup ::"] scratchpad show
-bindsym $mod+m exec --no-startup-id termite -e  'bash -c "~/dotfiles/bin/memo && bash"' --hold --title MEMOPAD &
+bindsym $mod+m exec --no-startup-id termite -e  'zsh -c "~/dotfiles/bin/memo && zsh"' --hold --title MEMOPAD &
 
 for_window [title="MEMOPAD"] floating enable, resize set 90 ppt 90 ppt, move absolute position center
 for_window [title="Microsoft Teams Notification"] floating enable
