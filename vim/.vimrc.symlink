@@ -274,7 +274,7 @@ set hlsearch
 nnoremap <esc><esc> :nohls<cr>
 
 " Markdown fenced code block syntax highlighting
-let g:markdown_fenced_languages = ['javascript=js', 'vim', 'html', 'python', 'bash=sh']
+let g:markdown_fenced_languages = ['js=javascript', 'javascript', 'javascript=js', 'vim', 'html', 'python', 'bash=sh']
 
 " Folding options
 set foldmethod=syntax
