@@ -85,10 +85,10 @@ bindsym $mod+t layout tabbed
 bindsym $mod+s layout toggle split
 
 # toggle tiling / floating
-# bindsym $mod+Shift+enter floating toggle
+bindsym $mod+Shift+f floating toggle
 
 # change focus between tiling / floating windows
-# bindsym $mod+enter focus mode_toggle
+# bindsym $mod+v focus mode_toggle
 
 # focus the parent container
 bindsym $mod+p focus parent
@@ -100,7 +100,12 @@ bindsym $mod+c focus child
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+minus scratchpad show, [instance="__scratchpad"] move position center
 # bindsym $mod+p exec termite --name=_scratchpad_
-for_window [instance="_scratchpad_"] move scratchpad, move absolute position 680 31, resize set 1200 600
+# for_window [instance="_scratchpad_"] move scratchpad, move absolute position 680 31, resize set 1200 600
+# Show the sup-mail scratchpad window, if any.
+bindsym mod+m [title="^Sup ::"] scratchpad show
+bindsym $mod+m exec --no-startup-id termite -e  'bash -c "~/dotfiles/bin/memo && bash"' --hold --title MEMOPAD &
+
+for_window [title="MEMOPAD"] floating enable, resize set 90 ppt 90 ppt, move absolute position center
 for_window [title="Microsoft Teams Notification"] floating enable
 
 # Make the currently focused window a scratchpad
@@ -185,7 +190,7 @@ bindsym $mod+Shift+9 move container to workspace $workspace9
 # reload the configuration file
 bindsym $mod+Shift+r reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+f restart
+# bindsym $mod+Shift+f restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
@@ -225,7 +230,7 @@ bar {
 exec xmodmap -e "clear lock" #disable caps lock switch
 exec xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
 
-exec --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/wall.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/wall.jpg
 
 # exec --no-startup-id i3-msg 'workspace '$workspace5'; exec chromium --proxy-pac-url=http://pac.zscloud.net/seeds-excellence.com/Seeds_PAC'
 # exec --no-startup-id i3-msg 'workspace '$workspace4'; exec chromium --proxy-pac-url=http://pac.zscloud.net/seeds-excellence.com/Seeds_PAC'
