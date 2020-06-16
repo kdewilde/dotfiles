@@ -1,9 +1,10 @@
 # this will mount a virtualbox folder named share to the SHARE_HOME env variable
 
-if [ -d $SHARE_HOME ] && [[ ! $( grep $SHARE_HOME" " /proc/mounts ) ]] 
+LOCATION=$VIRTUALBOX_HOME
+if [ -d $LOCATION ] && [[ ! $( grep $LOCATION" " /proc/mounts ) ]] 
 then
-    echo "Mounting Virtualbox shared folder under $SHARE_HOME"
-    mkdir -p $SHARE_HOME
-    sudo mount -t vboxsf virtualboxShare $SHARE_HOME
+    echo "Mounting Virtualbox shared folder under $LOCATION"
+    mkdir -p $LOCATION
+    sudo mount -t vboxsf virtualboxShare $LOCATION
 fi
 
