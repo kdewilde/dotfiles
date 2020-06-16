@@ -88,7 +88,7 @@ bindsym $mod+s layout toggle split
 bindsym $mod+Shift+f floating toggle
 
 # change focus between tiling / floating windows
-# bindsym $mod+v focus mode_toggle
+bindsym $mod+v focus mode_toggle
 
 # focus the parent container
 bindsym $mod+p focus parent
@@ -98,15 +98,17 @@ bindsym $mod+c focus child
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+minus scratchpad show, [instance="__scratchpad"] move position center
+# bindsym $mod+minus scratchpad show, [instance="__scratchpad"] move position center
 # bindsym $mod+p exec termite --name=_scratchpad_
 # for_window [instance="_scratchpad_"] move scratchpad, move absolute position 680 31, resize set 1200 600
 # Show the sup-mail scratchpad window, if any.
-bindsym mod+m [title="^Sup ::"] scratchpad show
-bindsym $mod+m exec --no-startup-id termite -e  'zsh -c "~/dotfiles/bin/memo && zsh"' --hold --title MEMOPAD &
+# bindsym mod+m [title="^Sup ::"] scratchpad show
+bindsym $mod+m exec --no-startup-id termite -e 'zsh -c "source ~/.zshrc && ~/dotfiles/bin/memo"' --hold --title MEMOPAD &
+bindsym $mod+i exec --no-startup-id intelij-idea-ultimate
 
 for_window [title="MEMOPAD"] floating enable, resize set 90 ppt 90 ppt, move absolute position center
-for_window [title="Microsoft Teams Notification"] floating enable
+# for_window [title="Microsoft Teams Notification"] floating enable
+for_window [title="Microsoft Teams Notification"] kill
 
 # Make the currently focused window a scratchpad
 # bindsym $mod+Shift+minus move scratchpad
