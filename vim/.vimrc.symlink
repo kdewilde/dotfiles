@@ -20,7 +20,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 
 Plug 'tpope/vim-surround'
-Plug 'easymotion/vim-easymotion'
+" Plug 'easymotion/vim-easymotion'
 
 " FZF
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -42,6 +42,8 @@ Plug 'kaicataldo/material.vim'
 
 " Syntax for different languages
 Plug 'sheerun/vim-polyglot'
+" Plug 'leafgarland/typescript-vim'
+" Plug 'peitalin/vim-jsx-typescript'
 
 " Commenting
 Plug 'tpope/vim-commentary'
@@ -58,7 +60,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " Initialize plugin system
 call plug#end()
 
-nmap s <Plug>(easymotion-s)
+" nmap s <Plug>(easymotion-s)
 """""""""""""""""""""""""""""""
 " Theme - Material
 """""""""""""""""""""""""""""""
@@ -196,8 +198,10 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nmap <leader>rn <Plug>(coc-rename)
 
 "" Remap for format selected region
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+" xmap <leader>f  <Plug>(coc-format-selected)
+" nmap <leader>f  <Plug>(coc-format-selected)
+"" eslint actions
+nmap <space><space> <Plug>(coc-codeaction)
 """""""""""""""""""""""""""""""
 " enable matchit plugin to match html tags with %
 filetype plugin on
@@ -211,13 +215,9 @@ nnoremap Q <nop>
 syntax on
 
 " TODO: Pick a leader key
-let mapleader = " "
+map <Space> <Leader>
 
-" Switch between last two buffers
-nnoremap <leader><leader> <C-^>
-
-
-set tags=tags;/
+" set tags=tags;/
 
 " Security
 set modelines=0
@@ -240,12 +240,12 @@ set wrap!
 " set textwidth=79
 set formatoptions=tcqrn1
 set noshiftround
-set tabstop=4       " The width of a TAB is set to 4.
+set tabstop=2       " The width of a TAB is set to 4.
                     " Still it is a \t. It is just that
                     " Vim will interpret it to be having
-                    " a width of 4.
-set shiftwidth=4    " Indents with '>' will have a width of 4.
-set softtabstop=4   " Sets the number of columns for a TAB.
+                    " a width of 2.
+set shiftwidth=2    " Indents with '>' will have a width of 4.
+set softtabstop=2   " Sets the number of columns for a TAB.
 set expandtab       " Expand TABs to spaces.
 set sidescroll=1    " When scrolling sideways move 1 char instead of half window
 
