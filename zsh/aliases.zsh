@@ -24,25 +24,21 @@ alias watchc="cd $PROJECTS_HOME/ceres && lsyncd lsyncd.lua"
 alias logc="vim $PROJECTS_HOME/ceres/ceres-application-starter/ceres/target/ceres-war.log"
 
 # VP
-alias runvp="cd $PROJECTS_HOME/vectoring-platform/vectoring-platform/integration/war && mvn cargo:run -o -Pdevelopment"
+alias runvp="cd $PROJECTS_HOME/vectoring-platform/vectoring-platform/integration/war && ./startupCargo.sh"
 alias cdvp="cd $PROJECTS_HOME/vectoring-platform"
 alias watchvp="cd $PROJECTS_HOME/vectoring-platform && lsyncd lsyncd.lua"
 
 # VESTA
-alias runv="cd $PROJECTS_HOME/vesta/rf-integration/integration-war && mvn cargo:run -o"
-alias cdv="cd $PROJECTS_HOME/vesta"
-alias watchv="cd $PROJECTS_HOME/vesta && lsyncd lsyncd.lua"
+alias cdve="cd $PROJECTS_HOME/vesta"
 
 # BITS
-alias buildb="cd $PROJECTS_HOME/bits && mvn clean package"
-alias runb="cd $PROJECTS_HOME/bits && mvn cargo:run"
 alias cdb="cd $PROJECTS_HOME/bits"
-alias watchb="cd $PROJECTS_HOME/bits && lsyncd lsyncd.lua"
 
 # TODO CHECK THESE FOR ZSH GIT MAPPING CONFLICTS
 alias gP="cd $PROJECTS_HOME"
 alias gpp="cd $PROJECTS_HOME"
-alias gpv="cd $PROJECTS_HOME/vesta"
+alias gpve="cd $PROJECTS_HOME/vesta"
+alias gpvp="cd $PROJECTS_HOME/vecotring-platform"
 alias gpc="cd $PROJECTS_HOME/ceres"
 alias gpb="cd $PROJECTS_HOME/bits"
 alias g.="cd $DOT_HOME"
