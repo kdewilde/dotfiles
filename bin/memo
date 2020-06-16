@@ -17,6 +17,7 @@
 #
 if [ $# -eq 0 ]
     then
+    hash fzf 2>/dev/null || echo "no FZF found :("
     if hash bat 2>/dev/null; then
         preview="bat --style=numbers --color=always {} | head -500";
     else
