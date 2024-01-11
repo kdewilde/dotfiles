@@ -9,7 +9,7 @@ alias r="ranger"
 
 alias vimrc="vim ~/.vimrc"
 alias zshrc="vim ~/.zshrc"
-alias i3conf="vim ~/.i3/config"
+alias i3conf="vim ~/.config/i3/config"
 alias rcconf="vim ~/.config/ranger/rc.conf"
 
 alias scdlmix="scdl -l https://soundcloud.com/ikno/sets/checkout-mixes --download-archive ~/memo/soundcloud/archive.txt -c --path ~/share/music"
@@ -19,7 +19,7 @@ alias scdlmix="scdl -l https://soundcloud.com/ikno/sets/checkout-mixes --downloa
 
 # CERES
 alias cdcf="cd $PROJECTS_HOME/ceres/ceres-web/ceres-web-fe/integration/WAR/src/main/webapp/js/ext6"
-alias runc="killjboss & cd $PROJECTS_HOME/ceres/ceres-application-starter/mvnscripts && ./buildAndRunCeres.sh"
+alias runc="killjboss & cd $PROJECTS_HOME/ceres/ && ./buildAndRunCeresDewildke.sh"
 alias watchc="cd $PROJECTS_HOME/ceres && lsyncd lsyncd.lua"
 alias logc="vim $PROJECTS_HOME/ceres/ceres-application-starter/ceres/target/ceres-war.log"
 
