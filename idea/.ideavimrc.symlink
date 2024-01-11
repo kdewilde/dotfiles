@@ -44,3 +44,5 @@ nnoremap <space>e :action Console.Jdbc.Execute<cr>
 nnoremap <space>v :action IntroduceVariable<cr>
 nnoremap <space>g :action Generate<cr>
 nnoremap <space>b :action CompileDirty<cr>
+nnoremap <space>t :action Refactorings.QuickListPopupAction<cr>
+
