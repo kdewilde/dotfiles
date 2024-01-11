@@ -267,7 +267,7 @@ map !  console shell%space
 map @  console -p6 shell  %%s
 map #  console shell -p%space
 map s  console shell%space
-map r  chain draw_possible_programs; console open_with%%space
+map r  chain draw_possible_programs; console open_with%space 
 #map f  console find%space
 map f console scout -ftse%space
 map cd console cd%space
@@ -340,6 +340,8 @@ map gpp eval fm.cd(os.getenv('PROJECTS_HOME'))
 map gpv eval fm.cd(os.getenv('PROJECTS_HOME') + '/vesta')
 map gpc eval fm.cd(os.getenv('PROJECTS_HOME') + '/ceres')
 map gpb eval fm.cd(os.getenv('PROJECTS_HOME') + '/bits')
+map gpl eval fm.cd(os.getenv('PROJECTS_HOME') + '/toec-ng-lib')
+map gpa eval fm.cd(os.getenv('PROJECTS_HOME') + '/andromeda-nebula')
 map g. eval fm.cd(os.getenv('DOT_HOME'))
 map gm eval fm.cd(os.getenv('MEMO_HOME'))
 map gs eval fm.cd(os.getenv('SHARE_HOME'))
@@ -366,11 +368,12 @@ map g? cd /usr/share/doc/ranger
 
 # External Programs
 map E  edit
-map du shell -p du --max-depth=1 -h --apparent-size
-map dU shell -p du --max-depth=1 -h --apparent-size | sort -rh
-map yp shell -f echo -n %d/%f | xsel -i; xsel -o | xsel -i -b
-map yd shell -f echo -n %d    | xsel -i; xsel -o | xsel -i -b
-map yn shell -f echo -n %f    | xsel -i; xsel -o | xsel -i -b
+map du shell -p du -d 1 -h "$(2>/dev/null >&2 du --apparent-size /dev/null && printf '%s\n' --apparent-size || printf '%s\n' --)"
+map dU shell -p du -d 1 -h "$(2>/dev/null >&2 du --apparent-size /dev/null && printf '%s\n' --apparent-size || printf '%s\n' --)" | sort -rh
+map yp yank path
+map yd yank dir
+map yn yank name
+map y. yank name_without_extension
 
 # Filesystem Operations
 map =  chmod
