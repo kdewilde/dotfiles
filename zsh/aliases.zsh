@@ -41,6 +41,7 @@ alias gpve="cd $PROJECTS_HOME/vesta"
 alias gpvp="cd $PROJECTS_HOME/vecotring-platform"
 alias gpc="cd $PROJECTS_HOME/ceres"
 alias gpb="cd $PROJECTS_HOME/bits"
+alias gpl="cd $PROJECTS_HOME/toec-ng-lib"
 alias g.="cd $DOT_HOME"
 alias gm="cd $MEMO_HOME"
 alias gs="cd $SHARE_HOME"
@@ -48,3 +49,11 @@ alias gk="cd $QMK_HOME"
 alias gq="cd $QMK_HOME"
 alias gd="cd ~/Downloads"
 alias gh="cd ~"
+
+# git commands
+alias gaa='git add --all'
+alias gst='git status'
+alias gcmsg="source $DOT_HOME/bin/jira-committer"
+alias gc='git commit --verbose'
+alias gc!='git commit --verbose --amend'
+alias gp='git push'

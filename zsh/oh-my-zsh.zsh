@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=$HOME/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
-  export FZF_BASE=$HOME/.fzf
+export FZF_BASE=$HOME/.fzf
 
 # Set name of the theme to load. 
 # ZSH_THEME="powerlevel9k/powerlevel9k"
@@ -52,8 +52,6 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-    git
-)
-
+plugins=(nx-completion)
+# source ~/.oh-my-zsh/custom/plugins/nx-completion/nx-completion.plugin.zsh
 source $ZSH/oh-my-zsh.sh

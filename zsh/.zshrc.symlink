@@ -42,61 +42,6 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 # Enable fuzzy finding
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# # User configuration
-# 
-# # ssh
-# # export SSH_KEY_PATH="~/.ssh/rsa_id"
-# 
-# # Set personal aliases, overriding those provided by oh-my-zsh libs,
-# # plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# # users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# # For a full list of active aliases, run `alias`.
-# 
-# source $HOME/.bash_aliases
-# 
-# export M2_HOME="/opt/maven"
-# export PATH=$M2_HOME/bin:$PATH
-# 
-# export CHROME_BIN="/usr/bin/chromium"
-# 
-# DEFAULT_USER=`whoami`
-# 
-# #!/bin/sh
-# #
-# # Usage: extract <file>
-# # Description: extracts archived files / mounts disk images
-# # Note: .dmg/hdiutil is macOS-specific.
-# #
-# credit: http://nparikh.org/notes/zshrc.txt
-# extract () {
-#     if [ -f $1 ]; then
-#         case $1 in
-#             *.tar.bz2)  tar -jxvf $1                        ;;
-#             *.tar.gz)   tar -zxvf $1                        ;;
-#             *.bz2)      bunzip2 $1                          ;;
-#             *.dmg)      hdiutil mount $1                    ;;
-#             *.gz)       gunzip $1                           ;;
-#             *.tar)      tar -xvf $1                         ;;
-#             *.tbz2)     tar -jxvf $1                        ;;
-#             *.tgz)      tar -zxvf $1                        ;;
-#             *.zip)      unzip $1                            ;;
-#             *.ZIP)      unzip $1                            ;;
-#             *.pax)      cat $1 | pax -r                     ;;
-#             *.pax.Z)    uncompress $1 --stdout | pax -r     ;;
-#             *.rar)      unrar x $1                          ;;
-#             *.Z)        uncompress $1                       ;;
-#             *)          echo "'$1' cannot be extracted/mounted via extract()" ;;
-#         esac
-#     else
-#         echo "'$1' is not a valid file"
-#     fi
-# }
-
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-export no_proxy=.basf.net,.agrogroup.net,localhost
+# nx-completion is only working when I include it here, not through plugins or a subloaded dotfiles/*.zsh file
+source ~/.oh-my-zsh/custom/plugins/nx-completion/nx-completion.plugin.zsh
 

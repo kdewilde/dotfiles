@@ -53,6 +53,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+focus_follows_mouse no
+
 # start a terminal
 bindsym $mod+space exec i3-sensible-terminal
 
@@ -94,9 +96,11 @@ bindsym $mod+y split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+a layout stacking
-bindsym $mod+t layout tabbed
-bindsym $mod+s layout toggle split
+# bindsym $mod+Shift+t layout stacking
+# bindsym $mod+t layout tabbed
+# bindsym $mod+s layout toggle split
+
+bindsym $mod+t layout toggle tabbed stacking split
 
 # toggle tiling / floating
 bindsym $mod+Shift+f floating toggle
@@ -117,10 +121,14 @@ bindsym $mod+c focus child
 # for_window [instance="_scratchpad_"] move scratchpad, move absolute position 680 31, resize set 1200 600
 # Show the sup-mail scratchpad window, if any.
 # bindsym mod+m [title="^Sup ::"] scratchpad show
+# Next command is for termite 
 # bindsym $mod+m exec --no-startup-id i3-sensible-terminal -e 'zsh -c "source ~/.zshrc && ~/dotfiles/bin/memo"' --hold --title MEMOPAD &
+# Next command is for alacritty
+bindsym $mod+m exec --no-startup-id i3-sensible-terminal --title MEMOPAD -e zsh -c "source ~/.zshrc && ~/dotfiles/bin/memo" --hold &
 # bindsym $mod+i exec --no-startup-id intelij-idea-ultimate
 
-# for_window [title="MEMOPAD"] floating enable, resize set 90 ppt 90 ppt, move absolute position center
+for_window [title="MEMOPAD"] floating enable, resize set 90 ppt 90 ppt, move absolute position center
+# 
 # for_window [title="Microsoft Teams Notification"] floating enable
 # for_window [title="Microsoft Teams Notification"] kill
 

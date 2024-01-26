@@ -1,9 +1,11 @@
-# fbr - checkout git branch
-fbr() {
+# fb - checkout git branch
+fb() {
     local branches branch
-    branches=$(git --no-pager branch -vv) &&
-    branch=$(echo "$branches" | fzf +m) &&
-    git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
+    # -r = remote branches
+    # --sort = -committerdate (reverse commit date)
+    branches=$(git --no-pager branch -vv -r --sort=-committerdate) &&
+    branch=$(echo "$branches" | fzf +m -e --no-sort) &&
+    git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //" | sed "s/origin\///")
 }
 
 # vf - fuzzy open with vim from anywhere

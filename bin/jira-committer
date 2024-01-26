@@ -1,0 +1,26 @@
+#!/bin/bash
+
+#note: Branch name format JIRA_TICKET_CODE-*(optional)
+#example: XP-1232-anything, MBBS-3234,XP-1234, MBBS-1400-NAME1-NAME2
+
+#note: Commit message format
+#      jirac "Your commit message without Fixes XP-123455-etc"
+
+#pushd . : This command is used to save the current 
+#       directory into a stack and move to a new directory for temp use
+
+if [[ $# -eq 0 ]]; 
+then
+    printf "\033[1;31mCommit message is required!!\033[0m"
+else
+    COMMIT_MESSAGE=$1 #Take first argument from terminal as commit message
+    CURRENT_BRANCH_NAME=$(git branch --show-current | awk -F '/' '{print $2}') # get current git branch name
+    FILTER_BRANCH_NAME=`echo $CURRENT_BRANCH_NAME | awk -F '-' '{print $1"-"$2}'` #filter and get in format like `XP-123`, `MBBS-123`
+    FINAL_COMMIT_MSG=`echo ${FILTER_BRANCH_NAME} ${1}` #XP-123 "Your commit message goes here "
+    if git commit -m ${FINAL_COMMIT_MSG};
+    then 
+        printf "\e[32mCommit success!!\e[m\n"
+    else 
+        printf "\033[1;31mMay be not a git directory or changes not added (use git add .) !!\033[0m"
+    fi
+fi
