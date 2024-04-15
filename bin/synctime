@@ -1,1 +1,11 @@
-timedatectl set-time "`timedatectl | grep "RTC time" | sed -r 's/^[^0-9]*//g;s/(.*) 0?([0-9]*):(.*)/echo \1 $((\2+1)):\3/e'`"
+
+# disable automatic synchronization using
+timedatectl set-ntp 0
+
+# timedatectl set-time "`timedatectl | grep "RTC time" | sed -r 's/^[^0-9]*//g;s/(.*) 0?([0-9]*):(.*)/echo \1 $((\2+1)):\3/e'`"
+timedatectl set-time "`curl "http://worldtimeapi.org/api/timezone/Europe/Brussels" | sed -r 's/.*"datetime":"[0-9-]*T//;s/\..*//'`"
+
+timedatectl set-ntp 1
+
+
+

@@ -20,6 +20,7 @@ alias scdlmix="scdl -l https://soundcloud.com/ikno/sets/checkout-mixes --downloa
 # CERES
 alias cdcf="cd $PROJECTS_HOME/ceres/ceres-web/ceres-web-fe/integration/WAR/src/main/webapp/js/ext6"
 alias runc="killjboss & cd $PROJECTS_HOME/ceres/ && ./buildAndRunCeresDewildke.sh"
+alias nxc="cd $PROJECTS_HOME/ceres/ngclient && nx serve"
 alias watchc="cd $PROJECTS_HOME/ceres && lsyncd lsyncd.lua"
 alias logc="vim $PROJECTS_HOME/ceres/ceres-application-starter/ceres/target/ceres-war.log"
 

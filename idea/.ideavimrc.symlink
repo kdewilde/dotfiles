@@ -37,7 +37,8 @@ nnoremap <space><space> :action ShowIntentionActions<cr>
 nnoremap <C-o> :action Back<cr>
 nnoremap <C-i> :action Forward<cr>
 
-nnoremap <space>f :action ReformatCode<cr>
+" nnoremap <space>f :action ReformatCode<cr>
+nnoremap <space>f :action TsLintFileFixAction<cr>
 nnoremap <space>c :action HideAllWindows<cr>
 nnoremap <space>p :action ParameterInfo<cr>
 nnoremap <space>e :action Console.Jdbc.Execute<cr>
