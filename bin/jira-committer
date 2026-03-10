@@ -14,10 +14,21 @@ then
     printf "\033[1;31mCommit message is required!!\033[0m"
 else
     COMMIT_MESSAGE=$1 #Take first argument from terminal as commit message
-    CURRENT_BRANCH_NAME=$(git branch --show-current | awk -F '/' '{print $2}') # get current git branch name
-    FILTER_BRANCH_NAME=`echo $CURRENT_BRANCH_NAME | awk -F '-' '{print $1"-"$2}'` #filter and get in format like `XP-123`, `MBBS-123`
-    FINAL_COMMIT_MSG=`echo ${FILTER_BRANCH_NAME} ${1}` #XP-123 "Your commit message goes here "
-    if git commit -m ${FINAL_COMMIT_MSG};
+    # CURRENT_BRANCH_NAME=$(git branch --show-current | awk -F '/' '{print $2}') # get current git branch name
+    # FILTER_BRANCH_NAME=`echo $CURRENT_BRANCH_NAME | awk -F '-' '{print $1"-"$2}'` #filter and get in format like `XP-123`, `MBBS-123`
+    # Get current branch name
+    CURRENT_BRANCH_NAME=$(git branch --show-current)
+    # Extract the JIRA ticket (e.g., XP-123, MBBS-456) from the branch name
+    # This regex matches the first occurrence of something like ABC-123
+    FILTER_BRANCH_NAME=$(echo "$CURRENT_BRANCH_NAME" | grep -oE '[A-Z]+-[0-9]+')
+    # Combine the ticket and the commit message
+    if [ -z "$FILTER_BRANCH_NAME" ]; then
+        FINAL_COMMIT_MSG="${COMMIT_MESSAGE}"
+    else
+        FINAL_COMMIT_MSG="${FILTER_BRANCH_NAME} ${COMMIT_MESSAGE}"
+    fi
+
+    if git commit -m "${FINAL_COMMIT_MSG}";
     then 
         printf "\e[32mCommit success!!\e[m\n"
     else 
