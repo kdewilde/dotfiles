@@ -7,6 +7,8 @@ alias ll="ls -lhA"
 
 alias r="ranger"
 
+alias o="opencode"
+
 alias vimrc="vim ~/.vimrc"
 alias zshrc="vim ~/.zshrc"
 alias i3conf="vim ~/.config/i3/config"
@@ -16,6 +18,10 @@ alias scdlmix="scdl -l https://soundcloud.com/ikno/sets/checkout-mixes --downloa
 
 # alias postman="~/myapps/Postman/app/Postman &|"
 # alias robo3t="~/myapps/robo3t/bin/robo3t &|"
+
+
+# TNL
+alias nxl="cd $PROJECTS_HOME/toec-ng-lib && nx serve"
 
 # CERES
 alias cdcf="cd $PROJECTS_HOME/ceres/ceres-web/ceres-web-fe/integration/WAR/src/main/webapp/js/ext6"
@@ -43,6 +49,9 @@ alias gpvp="cd $PROJECTS_HOME/vecotring-platform"
 alias gpc="cd $PROJECTS_HOME/ceres"
 alias gpb="cd $PROJECTS_HOME/bits"
 alias gpl="cd $PROJECTS_HOME/toec-ng-lib"
+alias gpa="cd $PROJECTS_HOME/andromeda"
+alias gpo="cd $PROJECTS_HOME/toec-oister"
+
 alias g.="cd $DOT_HOME"
 alias gm="cd $MEMO_HOME"
 alias gs="cd $SHARE_HOME"
@@ -58,3 +67,13 @@ alias gcmsg="source $DOT_HOME/bin/jira-committer"
 alias gc='git commit --verbose'
 alias gc!='git commit --verbose --amend'
 alias gp='git push'
+alias gf='git fetch'
+
+# lazygit
+alias g='lazygit-gm'
+alias lazy='lazygit-gm'
+alias lazygit='lazygit-gm'
+alias lg='lazygit-gm'
+
+# npm alias
+alias npmi='npm i'
