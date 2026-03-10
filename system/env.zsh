@@ -18,3 +18,6 @@ fi
 if hash chromium 2>/dev/null; then
     export BROWSER='chromium'
 fi
+
+export _JAVA_AWT_WM_NONREPARENTING=1
+export SKIP_EDGE=1
