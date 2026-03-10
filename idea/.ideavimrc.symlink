@@ -1,49 +1,83 @@
+" basic stuff
 set ignorecase
 set smartcase
-
 set incsearch
+
 set hlsearch
 nnoremap <esc><esc> :nohls<cr>
 
+" extensions
+" use <A-n> to select next occurence
+set multiple-cursors
+
+" provides a text-object 'a' (argument)
+set argtextobj
+
+" An always-on highlight for a unique character in every word on a line to help you use f, F
+set quickscope
+
+" enable ysw 
 set surround
+" enable gcc 
 set commentary
-nmap s :action KJumpAction<cr>
+" enable gr{motion}
+set ReplaceWithRegister
+" highlights what was just yanked
+set highlightedyank
 
-nmap gh :action ShowNavBar<cr>
+" register leader
+let mapleader = " "
 
+map s <Action>(KJumpAction)
+
+map gh <Action>(ShowNavBar)
+
+
+map [c <Action>(VcsShowPrevChangeMarker)
+map ]c <Action>(VcsShowNextChangeMarker)
+map <leader>r <Action>(Vcs.RollbackChangedLines)
+
+map [e <Action>(GotoPreviousError)
+map ]e <Action>(GotoNextError)
+
+map gi <Action>(GotoImplementation)
+map gu <Action>(ShowUsages)
+map gU <Action>(FindUsages)
+
+
+map gt <Action>(GotoTest)
+map tn <Action>(Run)
+map tt <Action>(Run)
+map tr <Action>(ReRun)
+map td <Action>(Debug)
+
+map <leader><leader> <Action>(ShowIntentionActions)
+
+" Fix for github copilot weird backspace behaviour
+sethandler <C-g> a:vim
+nmap <C-g> i<Action>(OpenInlineChatAction)
+imap <C-g> <Action>(OpenInlineChatAction)
+" vmap <C-i> <Action>(OpenInlineChatAction)
+
+
+map <C-o> <Action>(Back)
+map <C-i> <Action>(Forward)
 " nmap gb :action Back<cr>
 " nmap gf :action Forward<cr>
 
-nmap [c :action VcsShowPrevChangeMarker<cr>
-nmap ]c :action VcsShowNextChangeMarker<cr>
-nmap <space>r :action Vcs.RollbackChangedLines<cr>
+" nnoremap <leader>f :action ReformatCode<cr>
+" nnoremap <leader>f :action TsLintFileFixAction<cr>
+map <leader>f <Action>(Javascript.Linters.EsLint.Fix)
+map <leader>c <Action>(HideAllWindows)
+map <leader>p <Action>(ParameterInfo)
+map <leader>e <Action>(Console.Jdbc.Execute)
+map <leader>v <Action>(IntroduceVariable)
+map <leader>g <Action>(Generate)
+map <leader>b <Action>(CompileDirty)
+map <leader>t <Action>(Refactorings.QuickListPopupAction)
 
-nmap [e :action GotoPreviousError<cr>
-nmap ]e :action GotoNextError<cr>
-
-nmap gi :action GotoImplementation<cr>
-nmap gu :action ShowUsages<cr>
-nmap gU :action FindUsages<cr>
-
-
-nmap gt :action GotoTest<cr>
-nmap tn :action Run<cr>
-nmap tt :action Run<cr>
-nmap tr :action ReRun<cr>
-nmap td :action Debug<cr>
-
-nnoremap <space><space> :action ShowIntentionActions<cr>
-
-nnoremap <C-o> :action Back<cr>
-nnoremap <C-i> :action Forward<cr>
-
-" nnoremap <space>f :action ReformatCode<cr>
-nnoremap <space>f :action TsLintFileFixAction<cr>
-nnoremap <space>c :action HideAllWindows<cr>
-nnoremap <space>p :action ParameterInfo<cr>
-nnoremap <space>e :action Console.Jdbc.Execute<cr>
-nnoremap <space>v :action IntroduceVariable<cr>
-nnoremap <space>g :action Generate<cr>
-nnoremap <space>b :action CompileDirty<cr>
-nnoremap <space>t :action Refactorings.QuickListPopupAction<cr>
-
+" Yank and paste from clipboard
+nnoremap ,y "+y
+vnoremap ,y "+y
+nnoremap ,yy "+yy
+nnoremap ,p "+p
