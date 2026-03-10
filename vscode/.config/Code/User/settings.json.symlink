@@ -1,49 +1,111 @@
 {
-    // disable telemetry reporting
-    "telemetry.enableTelemetry": false,
+  // disable telemetry reporting
+  "telemetry.enableTelemetry": false,
+  "materialTheme.fixIconsRunning": false,
+  "workbench.iconTheme": "material-icon-theme",
 
-    "workbench.colorTheme": "Solarized Dark",
-    "materialTheme.fixIconsRunning": false,
-    "workbench.iconTheme": "material-icon-theme",
+  // "jest.runMode": "on-demand",
 
-    // vim
-    "vim.useSystemClipboard": true,
-    "vim.hlsearch": true,
-    "vim.easymotion": true,
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": ["s"],
-            "after": ["leader", "leader", "s"]
-        },
-        {
-            "before": ["<C-n>"],
-            "commands": [":nohl"]
-        },
-        {
-            "before": ["-"],
-            "commands": ["+"]
-        },
-        {
-            "before": ["+"],
-            "commands": ["-"]
-        } 
-    ],
-    // Uses a hack to move around folds properly
-    "vim.foldfix": true,
-    "vim.statusBarColorControl": true,
-    "vim.statusBarColors.normal": ["#8FBCBB", "#434C5E"],
-    "vim.statusBarColors.insert": ["#BF616A", "#434C5E"],
-    "vim.statusBarColors.visual": ["#B48EAD", "#434C5E"],
-    "workbench.colorCustomizations": {
-        "statusBar.background": "#8FBCBB",
-        "statusBar.noFolderBackground": "#8FBCBB",
-        "statusBar.debuggingBackground": "#8FBCBB",
-        "statusBar.foreground": "#434C5E"
+  // vim
+  "vim.leader": "<space>",
+  "vim.useSystemClipboard": true,
+  "vim.hlsearch": true,
+  "vim.easymotion": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["s"],
+      "after": ["leader", "leader", "s"]
     },
-    "window.zoomLevel": 0,
-    "editor.quickSuggestions": false,
-    "diffEditor.ignoreTrimWhitespace": false,
-    "editor.fontLigatures": true,
-    "editor.fontFamily": "'Fira Code'",
-    "material-icon-theme.folders.theme": "classic"
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["-"],
+      "commands": ["+"]
+    },
+    {
+      "before": ["+"],
+      "commands": ["-"]
+    },
+
+    {
+      "before": ["t", "t"],
+      "commands": ["testing.reRunLastRun"]
+    },
+    {
+      "before": ["t", "d"],
+      "commands": ["testing.debugLastRun"]
+    },
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<A-n>"],
+      "commands": ["editor.action.addSelectionToNextFindMatch"]
+    }
+  ],
+  // Uses a hack to move around folds properly
+  "vim.foldfix": true,
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.normal": ["#8FBCBB", "#434C5E"],
+  "vim.statusBarColors.insert": ["#BF616A", "#434C5E"],
+  "vim.statusBarColors.visual": ["#B48EAD", "#434C5E"],
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#8FBCBB",
+    "statusBar.noFolderBackground": "#8FBCBB",
+    "statusBar.debuggingBackground": "#8FBCBB",
+    "statusBar.foreground": "#434C5E",
+    "statusBar.debuggingForeground": "#434C5E"
+  },
+  "window.zoomLevel": 0,
+  "editor.quickSuggestions": {
+    "comments": "off",
+    "strings": "off",
+    "other": "off"
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "'Fira Code'",
+  "material-icon-theme.folders.theme": "classic",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorTheme": "Dracula Theme",
+  // Use zsh for the integrated terminal so nvm is available
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "path": "bash",
+      "icon": "terminal-bash"
+    },
+    "zsh": {
+      "path": "/usr/bin/zsh",
+      "args": ["-l"]
+    },
+    "fish": {
+      "path": "fish"
+    },
+    "tmux": {
+      "path": "tmux",
+      "icon": "terminal-tmux"
+    },
+    "pwsh": {
+      "path": "pwsh",
+      "icon": "terminal-powershell"
+    }
+  },
+  // Ensure the extension-runner shells are login shells too
+  "terminal.integrated.allowMnemonics": false,
+  "chat.viewSessions.orientation": "stacked",
+  "playwright.reuseBrowser": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.autoSave": "afterDelay",
+  "playwright.showTrace": false,
+  "playwright.updateSnapshots": "none"
 }
