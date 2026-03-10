@@ -266,4 +266,6 @@ exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/wall.jpg
 exec --no-startup-id ~/dotfiles/system/virtualbox
 exec --no-startup-id xrandr --output rdp0 --primary
 
+exec_always --no-startup-id setxkbmap "us"
+
 
