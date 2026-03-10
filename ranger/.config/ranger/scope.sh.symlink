@@ -109,6 +109,21 @@ handle_extension() {
             python -m json.tool -- "${FILE_PATH}" && exit 5
             ;;
 
+        ## Markdown
+        md|markdown)
+            ## Preview markdown with syntax highlighting (colored headings, bold text)
+            ## Remove ** and ` markers while keeping ANSI color codes
+            batcat --color=always --style=plain --language=markdown -- "${FILE_PATH}" | \
+                sed -e 's/\x1b\[[0-9;]*m\*\*\x1b\[[0-9;]*m//g' -e 's/\x1b\[[0-9;]*m`\x1b\[[0-9;]*m//g' && exit 5
+            ## Fallback to bat (in case batcat is aliased as bat)
+            bat --color=always --style=plain --language=markdown -- "${FILE_PATH}" | \
+                sed -e 's/\x1b\[[0-9;]*m\*\*\x1b\[[0-9;]*m//g' -e 's/\x1b\[[0-9;]*m`\x1b\[[0-9;]*m//g' && exit 5
+            ## Fallback to rendered markdown (removes **, backticks but no colors)
+            pandoc -t html -- "${FILE_PATH}" | w3m -dump -T text/html && exit 5
+            ## Final fallback to plain pandoc
+            pandoc -s -t plain --columns="${PV_WIDTH}" -- "${FILE_PATH}" && exit 5
+            exit 2;;
+
         ## Direct Stream Digital/Transfer (DSDIFF) and wavpack aren't detected
         ## by file(1).
         dff|dsf|wv|wvc)
