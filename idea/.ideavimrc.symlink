@@ -9,6 +9,7 @@ nnoremap <esc><esc> :nohls<cr>
 " extensions
 " use <A-n> to select next occurence
 set multiple-cursors
+sethandler <A-n> a:vim
 
 " provides a text-object 'a' (argument)
 set argtextobj
@@ -81,3 +82,6 @@ nnoremap ,y "+y
 vnoremap ,y "+y
 nnoremap ,yy "+yy
 nnoremap ,p "+p
+
+" Yank file path (relative to project root) to clipboard
+map <leader>yp <Action>(CopyPathFromRepositoryRootProvider)

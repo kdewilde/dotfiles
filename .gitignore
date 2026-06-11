@@ -10,3 +10,6 @@ atom.symlink/blob-store
 atom.symlink/recovery
 
 git/gitconfig.local.symlink
+
+# Local-only env files (auto-loaded by zsh, never committed)
+**/*.secret.zsh

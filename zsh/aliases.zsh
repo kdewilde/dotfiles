@@ -8,6 +8,7 @@ alias ll="ls -lhA"
 alias r="ranger"
 
 alias o="opencode"
+# alias c="claude"
 
 alias vimrc="vim ~/.vimrc"
 alias zshrc="vim ~/.zshrc"
@@ -70,10 +71,9 @@ alias gp='git push'
 alias gf='git fetch'
 
 # lazygit
-alias g='lazygit-gm'
-alias lazy='lazygit-gm'
-alias lazygit='lazygit-gm'
-alias lg='lazygit-gm'
+alias g='lazygit'
+alias lazy='lazygit'
+alias lg='lazygit'
 
 # npm alias
 alias npmi='npm i'
